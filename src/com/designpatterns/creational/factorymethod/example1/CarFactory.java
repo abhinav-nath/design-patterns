@@ -1,4 +1,4 @@
-package com.designpatterns.creational.factorymethod;
+package com.designpatterns.creational.factorymethod.example1;
 
 public class CarFactory {
 	
