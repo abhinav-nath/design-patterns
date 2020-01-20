@@ -1,4 +1,4 @@
-package com.designpatterns.creational.abstractfactory;
+package com.designpatterns.creational.abstractfactory.example1;
 
 /*
  * This pattern creates a family of related objects that have different parent class or interface.

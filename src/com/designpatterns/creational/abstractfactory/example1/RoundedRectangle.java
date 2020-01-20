@@ -1,4 +1,4 @@
-package com.designpatterns.creational.abstractfactory;
+package com.designpatterns.creational.abstractfactory.example1;
 
 public class RoundedRectangle implements IShape {
 
