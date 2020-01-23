@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Singleton implements Serializable {
 
-	private static Singleton soleInstance = new Singleton();
+	private static final Singleton soleInstance = new Singleton();
 	
 	private Singleton() {
 		System.out.println("Creating...");
