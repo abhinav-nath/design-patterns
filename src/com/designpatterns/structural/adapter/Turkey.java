@@ -1,4 +1,4 @@
-package com.designpatterns.creational.adapter;
+package com.designpatterns.structural.adapter;
 
 public interface Turkey {
 
