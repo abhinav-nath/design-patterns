@@ -1,4 +1,4 @@
-package com.designprinciples.lsp.example1;
+package com.designprinciples.lsp.example2;
 
 import lombok.Getter;
 import lombok.Setter;
