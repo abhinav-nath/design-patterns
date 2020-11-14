@@ -1,18 +1,18 @@
 package com.designpatterns.behavioral.strategy.simuduck2;
 
-public class MallardDuck extends Duck implements Flyable, Quackable{
+public class MallardDuck extends Duck implements Flyable, Quackable {
 
-	@Override
-	public void display() {
-		System.out.println("I'm a Mallard Duck");
-	}
+    @Override
+    public void display() {
+        System.out.println("I'm a Mallard Duck");
+    }
 
-	public void fly() {
-		System.out.println("I'm flying");
-	}
+    public void fly() {
+        System.out.println("I'm flying");
+    }
 
-	public void quack() {
-		System.out.println("I'm quacking");
-	}
+    public void quack() {
+        System.out.println("I'm quacking");
+    }
 
 }

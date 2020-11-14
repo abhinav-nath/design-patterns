@@ -11,22 +11,22 @@ import java.io.ObjectOutputStream;
  */
 public class SerializationBreaksSingletonDemo {
 
-	public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
-		Singleton s1 = Singleton.getInstance();
-		System.out.println("HashCode of s1 : "+System.identityHashCode(s1));
-		
-		//Serialization
-		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("file.txt"));
-		oos.writeObject(s1);
-		oos.close();
-		
-		//De-serialization
-		ObjectInputStream ois = new ObjectInputStream(new FileInputStream("file.txt"));
-		Singleton s2 = (Singleton) ois.readObject();
-		ois.close();
-		
-		System.out.println("HashCode of s2 : "+System.identityHashCode(s2));
-	}
+        Singleton s1 = Singleton.getInstance();
+        System.out.println("HashCode of s1 : " + System.identityHashCode(s1));
+
+        // Serialization
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("file.txt"));
+        oos.writeObject(s1);
+        oos.close();
+
+        // De-serialization
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("file.txt"));
+        Singleton s2 = (Singleton) ois.readObject();
+        ois.close();
+
+        System.out.println("HashCode of s2 : " + System.identityHashCode(s2));
+    }
 
 }

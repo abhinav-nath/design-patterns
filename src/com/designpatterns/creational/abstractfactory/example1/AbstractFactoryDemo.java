@@ -19,24 +19,24 @@ package com.designpatterns.creational.abstractfactory.example1;
  */
 public class AbstractFactoryDemo {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		IShapeFactory shapeFactory = FactoryProducer.getFactory(false);
+        IShapeFactory shapeFactory = FactoryProducer.getFactory(false);
 
-		IShape shape1 = shapeFactory.getShape("RECTANGLE");
-		shape1.draw();
+        IShape shape1 = shapeFactory.getShape("RECTANGLE");
+        shape1.draw();
 
-		IShape shape2 = shapeFactory.getShape("SQUARE");
-		shape2.draw();
+        IShape shape2 = shapeFactory.getShape("SQUARE");
+        shape2.draw();
 
-		shapeFactory = FactoryProducer.getFactory(true);
+        shapeFactory = FactoryProducer.getFactory(true);
 
-		IShape shape3 = shapeFactory.getShape("RECTANGLE");
-		shape3.draw();
+        IShape shape3 = shapeFactory.getShape("RECTANGLE");
+        shape3.draw();
 
-		IShape shape4 = shapeFactory.getShape("SQUARE");
-		shape4.draw();
+        IShape shape4 = shapeFactory.getShape("SQUARE");
+        shape4.draw();
 
-	}
+    }
 
 }

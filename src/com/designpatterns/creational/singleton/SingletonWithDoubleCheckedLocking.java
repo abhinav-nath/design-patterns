@@ -10,23 +10,24 @@ package com.designpatterns.creational.singleton;
  */
 public class SingletonWithDoubleCheckedLocking {
 
-	/* The volatile keyword ensures that multiple threads handle the soleInstance variable correctly
-	 * when it is being initialized to the Singleton instance.
-	 */
-	private volatile static SingletonWithDoubleCheckedLocking soleInstance = null;
+    /*
+     * The volatile keyword ensures that multiple threads handle the soleInstance
+     * variable correctly when it is being initialized to the Singleton instance.
+     */
+    private volatile static SingletonWithDoubleCheckedLocking soleInstance = null;
 
-	private SingletonWithDoubleCheckedLocking() {
-		System.out.println("Creating...");
-	}
+    private SingletonWithDoubleCheckedLocking() {
+        System.out.println("Creating...");
+    }
 
-	public static SingletonWithDoubleCheckedLocking getInstance() {
-		// check for an instance. If there isn't one, enter a synchronized block
-		if(soleInstance == null) {
-			synchronized(SingletonWithDoubleCheckedLocking.class) {
-				if(soleInstance == null)
-					soleInstance = new SingletonWithDoubleCheckedLocking();
-			}
-		}
-		return soleInstance;
-	}
+    public static SingletonWithDoubleCheckedLocking getInstance() {
+        // check for an instance. If there isn't one, enter a synchronized block
+        if (soleInstance == null) {
+            synchronized (SingletonWithDoubleCheckedLocking.class) {
+                if (soleInstance == null)
+                    soleInstance = new SingletonWithDoubleCheckedLocking();
+            }
+        }
+        return soleInstance;
+    }
 }

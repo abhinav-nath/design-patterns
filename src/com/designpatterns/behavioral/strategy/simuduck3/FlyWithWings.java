@@ -2,7 +2,7 @@ package com.designpatterns.behavioral.strategy.simuduck3;
 
 public class FlyWithWings implements FlyBehavior {
 
-	public void fly() {
-		System.out.println("I'm flying");
-	}
+    public void fly() {
+        System.out.println("I'm flying");
+    }
 }

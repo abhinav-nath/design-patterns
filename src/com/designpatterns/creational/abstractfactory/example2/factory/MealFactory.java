@@ -5,7 +5,9 @@ import com.designpatterns.creational.abstractfactory.example2.maincourse.MainCou
 import com.designpatterns.creational.abstractfactory.example2.side.Side;
 
 public interface MealFactory {
-	public Drink createDrink();
-	public MainCourse createMainCourse();
-	public Side createSide();
+    public Drink createDrink();
+
+    public MainCourse createMainCourse();
+
+    public Side createSide();
 }

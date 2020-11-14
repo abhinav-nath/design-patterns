@@ -7,15 +7,16 @@ import com.designpatterns.creational.abstractfactory.example2.factory.MealFactor
 
 public class MealFactoryProducer {
 
-	public static MealFactory getMealFactory(MealTypes mealType) {
+    public static MealFactory getMealFactory(MealTypes mealType) {
 
-		if(MealTypes.INDIAN.equals(mealType)) {
-			return new IndianMealFactory();
-		} else if(MealTypes.ITALIAN.equals(mealType)) {
-			return new ItalianMealFactory();
-		} if(MealTypes.JAPANESE.equals(mealType)) {
-			return new JapaneseMealFactory();
-		}
-		return null;
-	}
+        if (MealTypes.INDIAN.equals(mealType)) {
+            return new IndianMealFactory();
+        } else if (MealTypes.ITALIAN.equals(mealType)) {
+            return new ItalianMealFactory();
+        }
+        if (MealTypes.JAPANESE.equals(mealType)) {
+            return new JapaneseMealFactory();
+        }
+        return null;
+    }
 }

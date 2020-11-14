@@ -28,26 +28,26 @@ package com.designpatterns.builder.example2;
 
 public class BuilderDemo {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		MealBuilder mb = new ItalianMealBuilder();
-		MealDirector md = new MealDirector(mb);
-		md.constructMeal();
-		Meal meal = md.getMeal();
-		System.out.println("Meal is : "+meal);
-		
-		mb = new JapaneseMealBuilder();
-		md = new MealDirector(mb);
-		md.constructMeal();
-		meal = md.getMeal();
-		System.out.println("Meal is : "+meal);
-		
-		mb = new IndianMealBuilder();
-		md = new MealDirector(mb);
-		md.constructMeal();
-		meal = md.getMeal();
-		System.out.println("Meal is : "+meal);
+        MealBuilder mb = new ItalianMealBuilder();
+        MealDirector md = new MealDirector(mb);
+        md.constructMeal();
+        Meal meal = md.getMeal();
+        System.out.println("Meal is : " + meal);
 
-	}
+        mb = new JapaneseMealBuilder();
+        md = new MealDirector(mb);
+        md.constructMeal();
+        meal = md.getMeal();
+        System.out.println("Meal is : " + meal);
+
+        mb = new IndianMealBuilder();
+        md = new MealDirector(mb);
+        md.constructMeal();
+        meal = md.getMeal();
+        System.out.println("Meal is : " + meal);
+
+    }
 
 }

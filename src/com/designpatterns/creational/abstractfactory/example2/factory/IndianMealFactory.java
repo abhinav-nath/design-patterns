@@ -9,25 +9,25 @@ import com.designpatterns.creational.abstractfactory.example2.side.Side;
 
 public class IndianMealFactory implements MealFactory {
 
-	@Override
-	public Drink createDrink() {
-		Drink drink = new Buttermilk();
-		drink.setDrinkName();
-		return drink;
-	}
+    @Override
+    public Drink createDrink() {
+        Drink drink = new Buttermilk();
+        drink.setDrinkName();
+        return drink;
+    }
 
-	@Override
-	public MainCourse createMainCourse() {
-		MainCourse mainCourse = new ChickenBiryani();
-		mainCourse.setMainCourseName();
-		return mainCourse;
-	}
+    @Override
+    public MainCourse createMainCourse() {
+        MainCourse mainCourse = new ChickenBiryani();
+        mainCourse.setMainCourseName();
+        return mainCourse;
+    }
 
-	@Override
-	public Side createSide() {
-		Side side = new CrispyCorn();
-		side.setSideName();
-		return side;
-	}
+    @Override
+    public Side createSide() {
+        Side side = new CrispyCorn();
+        side.setSideName();
+        return side;
+    }
 
 }

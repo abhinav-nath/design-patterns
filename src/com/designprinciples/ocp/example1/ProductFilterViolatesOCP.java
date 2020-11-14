@@ -9,34 +9,34 @@ import java.util.stream.Stream;
 // if a new attribute "Price" gets added in the Product class then Filter has to be added as well
 public class ProductFilterViolatesOCP {
 
-	public Stream<Product> filterByColor(List<Product> products, Color color) {
-		return products.stream().filter(p -> p.color == color);
-	}
+    public Stream<Product> filterByColor(List<Product> products, Color color) {
+        return products.stream().filter(p -> p.color == color);
+    }
 
-	public Stream<Product> filterBySize(List<Product> products, Size size) {
-		return products.stream().filter(p -> p.size == size);
-	}
+    public Stream<Product> filterBySize(List<Product> products, Size size) {
+        return products.stream().filter(p -> p.size == size);
+    }
 
-	public Stream<Product> filterByColorAndSize(List<Product> products, Color color, Size size) {
-		return products.stream().filter(p -> p.size == size && p.color == color);
-	}
+    public Stream<Product> filterByColorAndSize(List<Product> products, Color color, Size size) {
+        return products.stream().filter(p -> p.size == size && p.color == color);
+    }
 }
 
 class ProductFilterViolatesOCPDemo {
 
-	public static void main(String args[]) {
-		Product apple = new Product("Apple", Color.GREEN, Size.SMALL);
-		Product tree = new Product("Tree", Color.GREEN, Size.LARGE);
-		Product house = new Product("House", Color.BLUE, Size.LARGE);
+    public static void main(String args[]) {
+        Product apple = new Product("Apple", Color.GREEN, Size.SMALL);
+        Product tree = new Product("Tree", Color.GREEN, Size.LARGE);
+        Product house = new Product("House", Color.BLUE, Size.LARGE);
 
-		List<Product> products = new ArrayList<>();
-		products.add(apple);
-		products.add(tree);
-		products.add(house);
+        List<Product> products = new ArrayList<>();
+        products.add(apple);
+        products.add(tree);
+        products.add(house);
 
-		ProductFilterViolatesOCP pf = new ProductFilterViolatesOCP();
-		System.out.println("Green products (old) : ");
-		pf.filterByColor(products, Color.GREEN).forEach(p -> System.out.println(" - " + p.name + " is green"));
+        ProductFilterViolatesOCP pf = new ProductFilterViolatesOCP();
+        System.out.println("Green products (old) : ");
+        pf.filterByColor(products, Color.GREEN).forEach(p -> System.out.println(" - " + p.name + " is green"));
 
-	}
+    }
 }

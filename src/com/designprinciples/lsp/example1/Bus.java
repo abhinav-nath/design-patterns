@@ -1,30 +1,17 @@
 package com.designprinciples.lsp.example1;
 
+import lombok.Getter;
+import lombok.Setter;
+
 enum BusType {
-	SLEEPER,
-	SEMISLEEPER,
-	SEATER
+    SLEEPER, SEMISLEEPER, SEATER
 }
 
+@Getter
+@Setter
 public class Bus extends Vehicle {
 
-	private int maxNumberOfPassengers;
-	private BusType busType;
-	
-	public int getMaxNumberOfPassengers() {
-		return maxNumberOfPassengers;
-	}
-	
-	public BusType getBusType() {
-		return busType;
-	}
-	
-	public void setMaxNumberOfPassengers(int maxNumberOfPassengers) {
-		this.maxNumberOfPassengers = maxNumberOfPassengers;
-	}
-	
-	public void setBusType(BusType busType) {
-		this.busType = busType;
-	}
-	
+    private int maxNumberOfPassengers;
+    private BusType busType;
+
 }

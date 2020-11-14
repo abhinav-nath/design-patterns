@@ -2,16 +2,16 @@ package com.designpatterns.creational.abstractfactory.example2.maincourse;
 
 public class Pizza implements MainCourse {
 
-	private String mainCourseName = null;
-	
-	@Override
-	public void setMainCourseName() {
-		mainCourseName = "Pizza";
-	}
+    private String mainCourseName = null;
 
-	@Override
-	public String getMainCourseName() {
-		return mainCourseName;
-	}
+    @Override
+    public void setMainCourseName() {
+        mainCourseName = "Pizza";
+    }
+
+    @Override
+    public String getMainCourseName() {
+        return mainCourseName;
+    }
 
 }
