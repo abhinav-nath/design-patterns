@@ -12,8 +12,11 @@ public class LSPViolation {
     }
 
     private static void clientMethod(Rectangle rectangle) {
-        rectangle.setWidth(5);
-        rectangle.setHeight(4);
+
+        // overriding setter methods of Rectangle class inside Square class
+        // results into violation of LSP
+        rectangle.setWidth(5);   // square's sides will be set to 5
+        rectangle.setHeight(4);  // square's sides will be set to 4
 
         /*
          * Enable Assertions  : VM arg  –ea or –enableassertions

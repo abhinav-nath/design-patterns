@@ -245,11 +245,13 @@ We can refactor our TransportationDevice class as follows:
  TrasportationDevice.java
 --------------------------
 class TrasportationDevice {
+
    String name;
+   double speed;
+
    String getName() { ... }
    void setName(String n) { ... }
 
-   double speed;
    double getSpeed() { ... }
    void setSpeed(double d) { ... }
 }
