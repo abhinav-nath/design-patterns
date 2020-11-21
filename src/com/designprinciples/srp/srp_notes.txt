@@ -185,4 +185,5 @@ This way, we will separate the functional and the "cosmetic" parts of the class.
 In the second example we have divided the responsibilities of editing text and printing text between two classes.
 You can notice that, if an error occurred, the debugging would be easier, since it wouldn't be that difficult to recognize where the mistake is.
 Also, there is less risk of accidentally introducing software bugs, since you're modifying a smaller portion of code.
-Even though it's not that noticeable in this example (since it is small), this kind of approach allows you to see the "bigger picture" and not lose yourself in the code; it makes programs easier to upgrade and expand, without the classes being too extensive, and the code becoming confusing.
+Even though it's not that noticeable in this example (since it is small), this kind of approach allows you to see the "bigger picture" and not lose yourself in the code;
+it makes programs easier to upgrade and expand, without the classes being too extensive, and the code becoming confusing.

@@ -1,4 +1,4 @@
-package com.designprinciples.dip;
+package com.designprinciples.dip.example2;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,10 +8,10 @@ import java.util.stream.Collectors;
 import org.javatuples.Triplet;
 
 // A. High-level modules should not depend on low-level modules. 
-// Both should depend on abstractions.
+//    Both should depend on abstractions.
 
 // B. Abstractions should not depend on details. 
-// Details should depend on abstractions.
+//    Details should depend on abstractions.
 
 enum Relationship {
     PARENT, CHILD, SIBLING

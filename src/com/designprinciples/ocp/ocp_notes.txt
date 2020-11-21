@@ -51,13 +51,18 @@ public class AreaCalculator {
 
 However, note that there were flaws in the way we designed our solution above.
 
-Lets say we have a new shape pentagon next. In that case we will again end up modifying AreaCalculator class. As the types of shapes grows this becomes messier as AreaCalculator keeps on changing and any consumers of this class will have to keep on updating their libraries which contain AreaCalculator. As a result, AreaCalculator class will not be baselined(finalized) with surety as every time a new shape comes it will be modified. So, this design is not closed for modification.
+Lets say we have a new shape pentagon next. In that case we will again end up modifying AreaCalculator class.
+As the types of shapes grows this becomes messier as AreaCalculator keeps on changing and any consumers of this class will have to keep on updating their libraries which contain AreaCalculator. As a result, AreaCalculator class will not be baselined(finalized) with surety as every time a new shape comes it will be modified.
+So, this design is not closed for modification.
 
 Also, note that this design is not extensible, i.e what if complicated shapes keep coming, AreaCalculator will need to keep on adding their computation logic in newer methods. We are not really expanding the scope of shapes; rather we are simply doing piece-meal(bit-by-bit) solution for every shape that is added.
 
 Modification of above design to comply with Open/Closed Principle:
 
-Let us now see a more elegant design which solves the flaws in the above design by adhering to the Open/Closed Principle. We will first of all make the design extensible. For this we need to first define a base type Shape and have Circle & Rectangle implement Shape interface –
+Let us now see a more elegant design which solves the flaws in the above design by adhering to the Open/Closed Principle.
+We will first of all make the design extensible.
+
+For this we need to first define a base type Shape and have Circle & Rectangle implement Shape interface –
 
 
 
@@ -104,7 +109,7 @@ The design has now undergone the following important changes to become extensibl
 	• There is a base interface Shape. All shapes now implement the base interface Shape
 	• Shape interface has an abstract method calculateArea(). Both circle & rectangle provide their own overridden implementation of calculateArea() method using their own attributes.
 	• We have brought-in a degree of extensibility as shapes are now an instance of Shape interfaces. This allows us to use Shape instead of individual classes wherever these classes are used by any consumer.
-	
+
 The last point above mentioned consumer of these shapes. In our case consumer will be the AreaCalculator class which would now look like this –
 
 
