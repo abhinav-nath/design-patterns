@@ -36,3 +36,4 @@ Behavioral patterns describe how classes and objects interact and communicate wi
 
 
 • Pitfalls:
+    1. The drawback with Command design pattern is that the code gets huge and confusing with high number of action methods and because of so many associations.
