@@ -15,7 +15,7 @@ Behavioral patterns describe how classes and objects interact and communicate wi
 
 • Pitfalls:
     1. Mostly, it can get broken easily:
-    2. If a processor fails to call the next processor, the command gets dropped
-    3. If a processor calls the wrong processor, it can lead to a cycle
-    4. It can create deep stack traces, which can affect performance
-    5. It can lead to duplicate code across processors, increasing maintenance
+       > If a processor fails to call the next processor, the command gets dropped
+       > If a processor calls the wrong processor, it can lead to a cycle
+    2. It can create deep stack traces, which can affect performance
+    3. It can lead to duplicate code across processors, increasing maintenance
