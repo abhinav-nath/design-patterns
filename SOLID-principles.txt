@@ -3,11 +3,12 @@
 ---------------------------------
 • What does it say ?
     Classes should have a single responsibility and thus only a single reason to change.
+    The classes you write, should not be a swiss army knife. They should do one thing, and to that one thing well.
 
 • Problem:
     Text class having 3 attributes - text, author and length
     Text class also has a printText() method to print the text -> this breaks SRP
-  
+
 • Solution:
     Move out printText() method to another class Printer (separation of concerns)
     Text class should not care about printing the text
@@ -25,7 +26,7 @@
     In future, if we want to calculate area of a Circle then create a Circle class with attribute - radius
     Add another method in AreaCalculator - calculateCircleArea(Circle circle)
     If new shape needs to be added then AreaCalculator has to be modified again and again!
-  
+
 • Solution:
     Create an interface Shape with method - double calculateArea()
     Now add as many shapes as you want and have the area calculation logic in the classes implementing the Shape interface
@@ -33,13 +34,13 @@
     Rectangle implements Shape
     Circle implements Shape
     Pentagon implements Shape
-     
+
     And the AreaCalculator class changes now has one method which takes the Shape as an argument :
 
     public double calculateShapeArea(Shape shape) {
 	   return shape.calculateArea();
 	}
-	
+
 
 ------------------------------- 
  Liskov Substitution Principle
@@ -98,7 +99,7 @@
     - Printer : print()
     - Scanner : scan()
     - Faxer   : fax()
-    
+
     Photocopier implements Printer, Scanner
 
     Scanner implements Scanner

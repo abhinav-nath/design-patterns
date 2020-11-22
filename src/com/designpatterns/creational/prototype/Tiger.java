@@ -15,7 +15,6 @@ public class Tiger implements Animal {
         try {
             tigerObject = (Tiger) super.clone();
         } catch (CloneNotSupportedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return tigerObject;

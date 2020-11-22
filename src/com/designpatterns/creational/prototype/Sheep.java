@@ -15,7 +15,6 @@ public class Sheep implements Animal {
         try {
             sheepObject = (Sheep) super.clone();
         } catch (CloneNotSupportedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return sheepObject;

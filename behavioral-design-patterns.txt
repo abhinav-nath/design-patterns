@@ -1,0 +1,21 @@
+Behavioral patterns describe how classes and objects interact and communicate with each other.
+
+--------------------------------- 
+ Chain of Responsibility Pattern
+---------------------------------
+• What does it say ?
+    Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request.
+    Chain the receiving objects and pass the request along the chain until an object handles it.
+
+    This pattern lets you pass requests along a chain of handlers.
+    Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
+
+• Example:
+    ATM machine implementation.
+
+• Pitfalls:
+    1. Mostly, it can get broken easily:
+    2. If a processor fails to call the next processor, the command gets dropped
+    3. If a processor calls the wrong processor, it can lead to a cycle
+    4. It can create deep stack traces, which can affect performance
+    5. It can lead to duplicate code across processors, increasing maintenance

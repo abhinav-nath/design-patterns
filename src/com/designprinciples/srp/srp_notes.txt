@@ -6,6 +6,7 @@ A class should
 
 Formulated by Robert Martin.
 
+The classes you write, should not be a swiss army knife. They should do one thing, and to that one thing well.
 
 A class should only have one responsibility, which is further defined by Martin as "one reason to change".
 
