@@ -1,0 +1,70 @@
+Reference - Effective Java by Joshua Bloch
+
+Consider the case of a class representing the Nutrition Facts label that appears on packaged foods.
+
+These labels have a few required fields:
+
+- serving size
+- servings per container
+- calories per serving
+
+and more than twenty optional fields:
+
+- total fat
+- saturated fat
+- trans fat
+- cholestrol
+- sodium . . and so on
+
+Most products have non-zero values for only a few of these optional fields.
+
+-------------------------------------------------------
+ Telescoping Constructor Pattern - does not scale well
+-------------------------------------------------------
+
+To address such a requirement, traditionally, programmers have used the Telescoping Constructor Pattern,
+in which you provide a constructor with only the required parameters, another with a single optional parameter,
+a third with two optional parameters, and so on, culminating in a constructor with all the optional parameters.
+
+Drawbacks:
+
+1. NutritionFacts cocaCola = new NutritionFacts(240, 8, 100, 0, 35, 27);
+
+   Typically this constructor invocation will require many parameters that you don't want to set,
+   but you are forced to pass a value for them anyway.
+   In this case we passed a value of 0 for fat.
+   
+   With only six parameters this may not seem so bad but it quickly gets out of hand as the
+   number of parameters increases.
+
+2. It is hard to write client code where there are many parameters and harder still to read it.
+   The reader is left wondering what all those values mean and must carefully count parameters to find out.
+   Client can accidentally reverse two parameters. The compiler won't complain but the program will misbehave at runtime.
+
+---------------------------------------------------------------
+ JavaBeans Pattern - allows inconsistency, mandates mutability
+---------------------------------------------------------------
+
+A second alternative is the JavaBeans Pattern, in which you call a parameterless constructor to create the object
+and then call setter methods to set each required parameter and each optional parameter of interest.
+
+Drawbacks:
+
+1. Because construction is split across multiple calls, a JavaBean may be in an inconsistent state partway
+   through its construction.
+
+
+-----------------
+ Builder Pattern
+-----------------
+
+Builder pattern combines the safety of the telescoping constructor pattern with the readability of the JavaBeans pattern.
+
+Instead of making the desired object directly, the client calls a constructor (or static factory) with all of the
+required parameters and gets a builder object.
+
+Then the client calls setter-like methods on the builder object to set each optional parameter of interest.
+
+Finally, the client calls a parameterless build() method to generate the object, which is typically immutable.
+
+The builder is typically a static member class of the class it builds.

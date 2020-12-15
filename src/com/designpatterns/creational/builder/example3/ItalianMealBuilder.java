@@ -1,4 +1,4 @@
-package com.designpatterns.builder.example2;
+package com.designpatterns.creational.builder.example3;
 
 public class ItalianMealBuilder implements MealBuilder {
 
