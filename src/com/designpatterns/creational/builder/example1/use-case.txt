@@ -68,3 +68,31 @@ Then the client calls setter-like methods on the builder object to set each opti
 Finally, the client calls a parameterless build() method to generate the object, which is typically immutable.
 
 The builder is typically a static member class of the class it builds.
+
+
+Advantages:
+
+- The Builder pattern is quite flexible.
+
+- A single builder can be used repeatedly to build multiple objects.
+
+- The parameters of the builder can be tweaked between invocations of the build() method to vary the
+  objects that are created.
+
+- A builder can fill in some fields automatically upon object creation, such as a serial number
+  that increases each time an object is created.
+
+
+Disadvantages:
+
+- In order to create an object, you must first create its builder.
+
+- While the cost of creating this builder is unlikely to be noticeable in practice, it could be
+  a problem in performance-critical situations.
+
+
+In summary, the Builder pattern is a good choice when designing classes whose constructors or static factories would have
+more than a handful of parameters, especially if many of the parameters are optional or of identical type.
+
+Client code is much easier to read and write with builders than with telescoping constructors,
+and builders are much safer than JavaBeans
