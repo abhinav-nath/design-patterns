@@ -11,7 +11,7 @@ public class BasicLazySingleton {
     public static BasicLazySingleton getInstance() {
 
         // new instance will only be created when asked for
-        if(instance == null)
+        if (instance == null)
             instance = new BasicLazySingleton();
 
         return instance;

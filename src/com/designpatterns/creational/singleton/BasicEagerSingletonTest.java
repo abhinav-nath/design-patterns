@@ -6,13 +6,13 @@ public class BasicEagerSingletonTest {
 
         BasicEagerSingleton basicSingleton1 = BasicEagerSingleton.getInstance();
 
-        System.out.println("basicSingleton1 : "+basicSingleton1.getValue());
+        System.out.println("basicSingleton1 : " + basicSingleton1.getValue());
         basicSingleton1.setValue(10);
-        System.out.println("basicSingleton1 : "+basicSingleton1.getValue());
+        System.out.println("basicSingleton1 : " + basicSingleton1.getValue());
 
         BasicEagerSingleton basicSingleton2 = BasicEagerSingleton.getInstance();
 
-        System.out.println("basicSingleton2 : "+basicSingleton2.getValue());
+        System.out.println("basicSingleton2 : " + basicSingleton2.getValue());
 
     }
 
