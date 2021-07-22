@@ -18,6 +18,7 @@
 * [Chain of Responsibility](https://github.com/abhinav-nath/design-patterns/tree/master/src/com/designpatterns/behavioral/chainofresponsibility "Chain of Responsibility Pattern")<br>
 * [Command](https://github.com/abhinav-nath/design-patterns/tree/master/src/com/designpatterns/behavioral/command "Command Pattern")<br>
 * [Strategy](https://github.com/abhinav-nath/design-patterns/tree/master/src/com/designpatterns/behavioral/strategy "Strategy Pattern")<br>
+* [Observer](https://github.com/abhinav-nath/design-patterns/tree/master/src/com/designpatterns/behavioral/observer "Observer Pattern")<br>
 
 #### Structural Design Patterns
 * [Adapter](https://github.com/abhinav-nath/design-patterns/tree/master/src/com/designpatterns/structural/adapter "Adapter Pattern")<br>
