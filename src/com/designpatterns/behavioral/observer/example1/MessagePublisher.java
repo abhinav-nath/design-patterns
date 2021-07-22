@@ -1,18 +1,18 @@
-package com.designpatterns.behavioral.observer;
+package com.designpatterns.behavioral.observer.example1;
 
 import java.util.Observable;
 
 public class MessagePublisher extends Observable {
 
-    private Message message;
+    private String message;
 
-    public void publishMessage(Message message) {
+    public void publishMessage(String message) {
         this.message = message;
         setChanged();
         notifyObservers(message);
     }
 
-    public Message getMessage() {
+    public String getMessage() {
         return this.message;
     }
 

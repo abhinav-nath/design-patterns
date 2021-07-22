@@ -1,4 +1,4 @@
-package com.designpatterns.behavioral.observer;
+package com.designpatterns.behavioral.observer.example1;
 
 public class Main {
 
@@ -14,13 +14,11 @@ public class Main {
         messagePublisher.addObserver(subscriber2);
         messagePublisher.addObserver(subscriber3);
 
-        Message message = new Message("Hello");
-        messagePublisher.publishMessage(message);
+        messagePublisher.publishMessage("Hello");
 
         System.out.println();
 
-        message = new Message("Hello World!");
-        messagePublisher.publishMessage(message);
+        messagePublisher.publishMessage("Hello World!");
 
     }
 
