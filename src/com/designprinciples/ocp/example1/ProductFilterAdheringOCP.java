@@ -8,7 +8,6 @@ public class ProductFilterAdheringOCP implements Filter<Product> {
 
     @Override
     public Stream<Product> filter(List<Product> items, Specification<Product> spec) {
-
         return items.stream().filter(p -> spec.isSatisfied(p));
     }
 
@@ -44,6 +43,6 @@ class ProductFilterAdheringOCPDemo {
         pf.filter(products,
                 new AndSpecification<>(new ColorSpecification(Color.GREEN), new SizeSpecification(Size.SMALL)))
                 .forEach(p -> System.out.println(" - " + p.name + " is green and small"));
-
     }
+
 }

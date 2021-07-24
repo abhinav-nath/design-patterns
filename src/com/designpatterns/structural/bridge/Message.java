@@ -4,10 +4,10 @@ public abstract class Message {
 
     protected MessageSender messageSender;
 
-    public Message(MessageSender messageSender) {
+    protected Message(MessageSender messageSender) {
         this.messageSender = messageSender;
     }
 
-    abstract public void send(String messageText);
+    protected abstract void send(String messageText);
 
 }

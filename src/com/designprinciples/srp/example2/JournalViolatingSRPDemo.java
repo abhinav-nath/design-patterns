@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // class violating SRP
-public class JournalViolatingSRP {
+class JournalViolatingSRP {
 
     private final List<String> entries = new ArrayList<>();
     private static int count = 0;
@@ -39,18 +39,17 @@ public class JournalViolatingSRP {
         }
     }
 
-    public void load(String fileName) {
-    }
+    public void load(String fileName) {}
 
-    public void load(URL url) {
-    }
+    public void load(URL url) {}
+
     /*
      * Violation of SRP - save and load methods should be moved to their own
      * separate class to let Journal adhere to SRP
      */
 }
 
-class JournalViolatingSRPdemo {
+public class JournalViolatingSRPDemo {
     public static void main(String args[]) throws Exception {
         JournalViolatingSRP j = new JournalViolatingSRP();
         j.addEntry("I cried today");

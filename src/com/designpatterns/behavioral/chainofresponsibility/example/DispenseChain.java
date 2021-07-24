@@ -2,8 +2,8 @@ package com.designpatterns.behavioral.chainofresponsibility.example;
 
 public interface DispenseChain {
 
-    void setNextChain(DispenseChain nextChain);
+    public void setNextChain(DispenseChain nextChain);
 
-    void dispense(Currency cur);
+    public void dispense(Currency cur);
 
 }

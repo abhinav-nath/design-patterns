@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // class adhering to SRP
-public class JournalSRPwithPersistence {
+class JournalSRPWithPersistence {
 
     private final List<String> entries = new ArrayList<>();
     private static int count = 0;
@@ -23,6 +23,7 @@ public class JournalSRPwithPersistence {
     public String toString() {
         return String.join(System.lineSeparator(), entries);
     }
+
 }
 
 /*
@@ -31,7 +32,7 @@ public class JournalSRPwithPersistence {
  * class
  */
 class Persistence {
-    public void saveToFile(JournalSRPwithPersistence journal, String fileName, boolean overwrite) {
+    public void saveToFile(JournalSRPWithPersistence journal, String fileName, boolean overwrite) {
         if (overwrite || new File(fileName).exists()) {
             PrintStream out = null;
             try {
@@ -52,9 +53,11 @@ class Persistence {
 
 }
 
-class JournalSRPwithPersistenceDemo {
+public class JournalSRPWithPersistenceDemo {
+
     public static void main(String args[]) throws Exception {
-        JournalSRPwithPersistence j = new JournalSRPwithPersistence();
+
+        JournalSRPWithPersistence j = new JournalSRPWithPersistence();
         j.addEntry("I cried today");
         j.addEntry("I ate a bug");
 
@@ -68,4 +71,5 @@ class JournalSRPwithPersistenceDemo {
 
         Runtime.getRuntime().exec("notepad.exe " + fileName);
     }
+
 }

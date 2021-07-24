@@ -2,8 +2,8 @@ package com.designprinciples.dip.example1.compliance;
 
 public interface Switch {
 
-    boolean isOn();
+    public boolean isOn();
 
-    void press();
+    public void press();
 
 }

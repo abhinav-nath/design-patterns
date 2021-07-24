@@ -2,7 +2,7 @@ package com.designprinciples.ocp.example2;
 
 public class Circle implements Shape {
 
-    double radius;
+    private double radius;
 
     public Circle(double radius) {
         super();

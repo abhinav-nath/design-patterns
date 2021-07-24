@@ -37,6 +37,6 @@ class ProductFilterViolatesOCPDemo {
         ProductFilterViolatesOCP pf = new ProductFilterViolatesOCP();
         System.out.println("Green products (old) : ");
         pf.filterByColor(products, Color.GREEN).forEach(p -> System.out.println(" - " + p.name + " is green"));
-
     }
+
 }

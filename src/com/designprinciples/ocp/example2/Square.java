@@ -2,7 +2,7 @@ package com.designprinciples.ocp.example2;
 
 public class Square implements Shape {
 
-    double length;
+    private double length;
 
     public Square(double length) {
         super();

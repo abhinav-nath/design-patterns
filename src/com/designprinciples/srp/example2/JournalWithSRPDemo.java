@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 // class confirming to SRP
-public class JournalWithSRP {
+class JournalWithSRP {
 
     private final List<String> entries = new ArrayList<>();
     private static int count = 0;
@@ -21,9 +21,10 @@ public class JournalWithSRP {
     public String toString() {
         return String.join(System.lineSeparator(), entries);
     }
+
 }
 
-class JournalWithSRPdemo {
+public class JournalWithSRPDemo {
     public static void main(String args[]) {
         JournalWithSRP j = new JournalWithSRP();
         j.addEntry("I cried today");

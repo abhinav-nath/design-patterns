@@ -1,6 +1,6 @@
 package com.designpatterns.structural.adapter;
 
-public class AdapterDemo {
+public class Main {
 
     public static void main(String[] args) {
 

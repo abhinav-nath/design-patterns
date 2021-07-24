@@ -20,4 +20,5 @@ public class Product {
         this.color = color;
         this.size = size;
     }
+
 }
