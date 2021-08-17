@@ -201,4 +201,4 @@ Cohesion and Coupling are two important aspects of SRP.
 ## Cohesion
 > Cohesion is the degree to which the various parts of a software components are related.
 
-[Cohesion](images/srp_cohesion.png "Download bloomRPC")
+![Cohesion](https://github.com/abhinav-nath/design-patterns/blob/master/images/srp_cohesion.png "Cohesion in General")
