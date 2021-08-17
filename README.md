@@ -1,7 +1,7 @@
 ## Design Principles
 
 #### SOLID principles
-* [Single Responsibility Principle](./src/com/codecafe/designprinciples/srp/SRP.md "Single Responsibility Principle")<br>
+* [Single Responsibility Principle](./src/com/codecafe/designprinciples/srp/single-responsibility-principle.md "Single Responsibility Principle")<br>
 * [Open Closed Principle](./src/com/codecafe/designprinciples/ocp/open-closed-principle.md "Open Closed Principle")<br>
 * [Liskov Substitution Principle](./src/com/codecafe/designprinciples/lsp/liskov-substitution-principle.md "Liskov Substitution Principle")<br>
 * [Interface Segregation Principle](./src/com/codecafe/designprinciples/isp "Interface Segregation Principle")<br>
