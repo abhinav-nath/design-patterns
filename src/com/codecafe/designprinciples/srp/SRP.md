@@ -198,7 +198,143 @@ it makes programs easier to upgrade and expand, without the classes being too ex
 
 Cohesion and Coupling are two important aspects of SRP.
 
+Any component adheres to SRP when:
+* *Level of Cohesion is high*
+* *Level of Coupling is low*
+
 ## Cohesion
-> Cohesion is the degree to which the various parts of a software components are related.
+> *Cohesion is the degree to which the various parts of a software components are related*
 
 ![Cohesion](https://github.com/abhinav-nath/design-patterns/blob/master/images/srp_cohesion.png "Cohesion in General")
+
+* The contents of the garbage have low cohesion
+* The contents of each bin have high cohesion because those are related items
+
+```java
+public class Square {
+
+    int side = 5;
+
+    public int calculateArea() {
+        return side * side;
+    }
+
+    public int calculatePerimeter() {
+        return side * 4;
+    }
+
+    public void draw(boolean isHighResolutionMonitor) {
+        if (isHighResolutionMonitor) {
+            // Render a high resolution image of a square
+        } else {
+            // Render a normal image of a square
+        }
+    }
+
+    public void rotate(int degree) {
+        // Rotate the image of the square to the input degree
+    }
+
+}
+```
+
+In the above example:
+
+* `calculateArea()` and `calculatePerimeter()` are cohesive (closely related) because they deal with the measurements of a square
+* `draw()` and `rotate()` are cohesive because they deal with rendering of the image
+
+BUT
+* The overall degree of cohesion of `Square` class is low because there are unrelated methods inside the same class
+
+> To increase the level of cohesion, we should segregate the code based on the responsibilities.
+
+Aiming for higher cohesion helps us to move towards Single Responsibility Principle.
+
+```java
+public class Square {
+
+    int side = 5;
+
+    public int calculateArea() {
+        return side * side;
+    }
+
+    public int calculatePerimeter() {
+        return side * 4;
+    }
+
+}
+```
+
+```java
+public class SquareUI {
+
+    public void draw(boolean isHighResolutionMonitor) {
+        if (isHighResolutionMonitor) {
+            // Render a high resolution image of a square
+        } else {
+            // Render a normal image of a square
+        }
+    }
+
+    public void rotate(int degree) {
+        // Rotate the image of the square to the input degree
+    }
+
+}
+```
+
+## Coupling
+
+> *Coupling is defined as the level of inter-dependency between various software components*
+
+Tight coupling is bad in softwares!
+
+```java
+@Getter
+@Setter
+public class Student {
+
+    private String id;
+    private Date dob;
+    private String address;
+
+    public void save() {
+        // open JDBC connection
+        // insert Student into DB
+        // close connection
+    }
+
+}
+```
+
+In the above example:
+
+* The `save()` method is tightly coupled with `Student` object
+* `Student` class should be contained only to carry the details of a student
+* The `Student` class should not be dealing with low level details of dealing with database
+* We can solve this problem by creating a `StudentRepository` class and hand over the database save part to that class
+
+```java
+@Getter
+@Setter
+public class Student {
+
+    private String id;
+    private Date dob;
+    private String address;
+
+}
+```
+
+```java
+public class StudentRepository {
+
+    public void save(Student student) {
+        // open JDBC connection
+        // insert Student into DB
+        // close connection
+    }
+
+}
+```

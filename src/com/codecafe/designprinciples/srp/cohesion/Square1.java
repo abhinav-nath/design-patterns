@@ -1,10 +1,10 @@
 package com.codecafe.designprinciples.srp.cohesion;
 
 /*
- * The overall degree of cohesion of Square class is low
+ * The overall degree of cohesion of Square1 class is low
  * because there are unrelated methods inside the same class
  */
-public class Square {
+public class Square1 {
 
     int side = 5;
 
