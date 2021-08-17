@@ -1,31 +1,33 @@
-"Classes should have a single responsibility and thus only a single reason to change."
+# Single Responsibility Principle
+
+> "Every **software component** should have one and only one responsibility."
+
+Component can be a class, a method, or a module.
+
+> Classes should have a single responsibility and thus only a single reason to change.
 
 A class should
-	• provide focused, single functionality only
-	• address a specific concern
+* provide focused, single functionality only
+* address a specific concern
 
-Formulated by Robert Martin.
+Formulated by Robert Martin
 
-The classes you write, should not be a swiss army knife. They should do one thing, and to that one thing well.
+* The classes you write, should not be a swiss army knife. They should do one thing, and do that one thing well.
+* A class should only have one responsibility, which is further defined by Martin as "one reason to change".
+* Gather together the things that change for the same reasons. Separate those things that change for different reasons.
 
-A class should only have one responsibility, which is further defined by Martin as "one reason to change".
-
-Gather together the things that change for the same reasons. Separate those things that change for different reasons.
-
-The SRP is about limiting the impact of change.
+> **The SRP is about limiting the impact of change.**
 
 From : https://hackernoon.com/you-dont-understand-the-single-responsibility-principle-abfdd005b137
 
-
 The SRP is a widely quoted justification for refactoring. This is often done without full understanding of the point of the SRP and its context, leading to fragmentation of code bases with a range of negative consequences. Instead of being a one-way street to minimally sized classes, the SRP is actually proposing a balance point between aggregation and division.
 
+If we keep our classes just with one responsibility, it does the following:
+1. Makes the class easier to maintain
+2. Potentially make class reusable (depending on whatever your class is dealing with)
+3. Easier to test
 
-If we keep our classes just with one responsibility, it does the following :
-	1. Makes the class easier to maintain
-	2. Potentially make class reusable (depending on whatever your class is dealing with)
-	3. Easier to test
-
-
+```java
 public class Service {
 
     public void insertStudent(Student student) {
@@ -52,15 +54,15 @@ public class Service {
         // delete course
     }
 }
+```
 
+In code above shows violation of SRP because `Service.java` handle the business logic for `Student` and `Course` class.
 
-In code above shows violation of SRP because Service.java handle the business logic for Student and Course class.
+In the future `Service.java` can become bloaters or even become our **nightmare** because we put everything in `Service.java`.
 
-In the future Service.java can become bloaters or even become our ‘nightmare’ because we put everything in Service.java.
+The solution is we need to split `Service.java` into specific class to handle business logic for `Student (StudentService.java)` and `Course (CourseService.java)`.
 
-The solution is we need to split Service.java into specific class to handle business logic for Student (StudentService.java) and Course (CourseService.java).
-
-
+```java
 public class CourseService {
 
     public void insert(Course course) {
@@ -75,9 +77,9 @@ public class CourseService {
         // delete course
     }
 }
+```
 
-
-
+```java
 public class StudentService {
 
     public void insert(Student student) {
@@ -92,12 +94,14 @@ public class StudentService {
         // delete student
     }
 }
+```
 
----------------
- (Bad) Example
----------------
-Let's consider this classic example in Java – "objects that can print themselves".
+---
+## (Bad) Example
 
+Let's consider this classic example in Java **objects that can print themselves**:
+
+```java
 class Text {
 
     String text;
@@ -121,12 +125,11 @@ class Text {
 
     void findSubTextAndDelete(String s) { ... }
 
-
     // method for formatting output
     void printText() { ... }
 
 }
-
+```
 
 At first glance, this class might look correctly written.
 However, it contradicts the single responsibility principle, in that it has multiple reasons to change:
@@ -134,57 +137,58 @@ we have two methods which change the text itself, and one which prints the text 
 If any of these methods is called, the class will change.
 This is also not good because it mixes the logic of the class with the presentation.
 
-----------------
- Better Example
-----------------
+---
+## Better Example
 
 One way of fixing this is writing another class whose only concern is to print text.
 This way, we will separate the functional and the "cosmetic" parts of the class.
 
-	class Text {
+```java
+class Text {
 	
-		String text;
-		String author;
-		int length;
-		
-		String getText() { ... }
-		
-		void setText(String s) { ... }
-		
-		String getAuthor() { ... }
-		
-		void setAuthor(String s) { ... }
-		
-		int getLength() { ... }
-		
-		void setLength(int k) { ... }
-		
-		// methods that change the text
-		void allLettersToUpperCase() { ... }
-		
-		void findSubTextAndDelete(String s) { ... }
-	
-	}
-	
-	
-	class Printer {
-	
-		Text text;
-		
-		Printer(Text t) {
-			this.text = t;
-		}
-		
-		void printText() { ... }
-	
-	}
+    String text;
+    String author;
+    int length;
 
+    String getText() { ... }
+	
+    void setText(String s) { ... }
 
----------
- Summary
----------
+    String getAuthor() { ... }
+
+    void setAuthor(String s) { ... }
+
+    int getLength() { ... }
+
+    void setLength(int k) { ... }
+
+    // methods that change the text
+    void allLettersToUpperCase() { ... }
+	
+    void findSubTextAndDelete(String s) { ... }
+
+}
+```
+
+```java
+class Printer {
+	
+    Text text;
+
+    Printer(Text t) {
+        this.text = t;
+    }
+
+    void printText() { ... }
+
+}
+```
+
+---
+## Summary
+
 In the second example we have divided the responsibilities of editing text and printing text between two classes.
 You can notice that, if an error occurred, the debugging would be easier, since it wouldn't be that difficult to recognize where the mistake is.
-Also, there is less risk of accidentally introducing software bugs, since you're modifying a smaller portion of code.
-Even though it's not that noticeable in this example (since it is small), this kind of approach allows you to see the "bigger picture" and not lose yourself in the code;
+Also, there is less risk of accidentally introducing software bugs, since you're modifying a smaller portion of code.
+Even though it's not that noticeable in this example (since it is small), this kind of approach allows you to see the **bigger picture** and not lose yourself in the code;
 it makes programs easier to upgrade and expand, without the classes being too extensive, and the code becoming confusing.
