@@ -1,8 +1,10 @@
 # Single Responsibility Principle
 
-> "Every **software component** should have one and only one responsibility."
+> "Every **software component** should have one and only one responsibility and only one reason to change."
 
 Component can be a class, a method, or a module.
+
+In terms of Java classes:
 
 > Classes should have a single responsibility and thus only a single reason to change.
 
@@ -198,9 +200,9 @@ it makes programs easier to upgrade and expand, without the classes being too ex
 
 Cohesion and Coupling are two important aspects of SRP.
 
-Any component adheres to SRP when:
-* *Level of Cohesion is high*
-* *Level of Coupling is low*
+To achieve SRP:
+* **Aim for High Cohesion**
+* **Aim for Low Coupling**
 
 ## Cohesion
 > *Cohesion is the degree to which the various parts of a software components are related*
