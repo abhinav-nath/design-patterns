@@ -192,3 +192,13 @@ You can notice that, if an error occurred, the debugging would be easier, since 
 Also, there is less risk of accidentally introducing software bugs, since you're modifying a smaller portion of code.
 Even though it's not that noticeable in this example (since it is small), this kind of approach allows you to see the **bigger picture** and not lose yourself in the code;
 it makes programs easier to upgrade and expand, without the classes being too extensive, and the code becoming confusing.
+
+---
+# Cohesion and Coupling
+
+Cohesion and Coupling are two important aspects of SRP.
+
+## Cohesion
+> Cohesion is the degree to which the various parts of a software components are related.
+
+[Cohesion](images/srp_cohesion.png "Download bloomRPC")
