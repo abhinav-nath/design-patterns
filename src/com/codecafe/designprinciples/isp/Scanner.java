@@ -2,5 +2,6 @@ package com.codecafe.designprinciples.isp;
 
 public interface Scanner {
 
-    public void scan(Document d);
+    public void scan(Document document);
+
 }

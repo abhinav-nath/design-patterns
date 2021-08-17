@@ -1,11 +1,22 @@
 package com.codecafe.designprinciples.isp;
 
-// An old-fashioned printer which can just print will also have to implement unnecessary methods scan and fax
-// So this interface violates ISP
+/*
+ * ---------------
+ *  Fat Interface
+ * ---------------
+ * An old-fashioned printer which can just print will also
+ * have to implement unnecessary methods scan() and fax()
+ * So this interface violates ISP !!
+ *
+ * Never force clients to implement methods they don't want to use!
+ *
+ */
 public interface MachineViolatingISP {
 
-    public void print(Document d);
-    public void scan(Document d);
-    public void fax(Document d);
+    public void print(Document document);
+
+    public void scan(Document document);
+
+    public void fax(Document document);
 
 }

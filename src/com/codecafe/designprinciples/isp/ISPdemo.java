@@ -12,12 +12,13 @@ package com.codecafe.designprinciples.isp;
 public class ISPdemo {
 
     public static void main(String args[]) {
-        OldFashionedPrinter o = new OldFashionedPrinter();
+        OldFashionedPrinter oldFashionedPrinter = new OldFashionedPrinter();
 
-        o.print(null);
+        oldFashionedPrinter.print(null);
 
-        Photocopier p = new Photocopier();
-        p.print(null);
-        p.scan(null);
+        Photocopier photocopier = new Photocopier();
+        photocopier.print(null);
+        photocopier.scan(null);
     }
+
 }
