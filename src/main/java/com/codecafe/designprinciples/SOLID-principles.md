@@ -68,6 +68,8 @@ Therefore a `Square` is behaviorally not a correct substitution for `Rectangle`!
 
 ### Solution:
 Correct the inheritance hierarchy by introducing a `Shape` interface
+
+```
 	             .------------------.
 	             |Shape             |
 	             |------------------|
@@ -84,7 +86,7 @@ Correct the inheritance hierarchy by introducing a `Shape` interface
 	|+int computeArea() |  |+setHeight(int height)|
 	'-------------------'  |+int computeArea()    |
 	                       '----------------------'
-
+```
 
 ## Interface Segregation Principle
 
