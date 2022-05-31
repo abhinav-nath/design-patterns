@@ -275,5 +275,5 @@ Also, the object who finally handles the request has no knowledge about the clie
   forwarded to a particular processor or there are no objects in the chain who are able to handle the request.
 
 
-- **CoR** pattern is good to achieve lose coupling but it comes with the trade-off of having a lot of implementation classes
+- **CoR** pattern is good to achieve loose coupling but it comes with the trade-off of having a lot of implementation classes
   and maintenance problems if most of the code is common in all the implementations.
