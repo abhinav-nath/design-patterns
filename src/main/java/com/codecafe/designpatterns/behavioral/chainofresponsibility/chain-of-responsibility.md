@@ -12,7 +12,7 @@ stand-alone objects called handlers.
   Chain the receiving objects and pass the request along the chain until an object handles it.
 
 
-- Launch-and-leave requests with a single processing pipeline that contains many possible handlers.
+- _Launch-and-leave_ requests with a single processing pipeline that contains many possible handlers.
 
 
 - An object-oriented linked list with recursive traversal.
@@ -30,13 +30,13 @@ the chain, with the last link being careful not to delegate to a "null next".
 We know that we can have multiple catch blocks in a `try-catch` block code. Here every catch block is kind of a
 processor to process that particular exception.
 
-So when any exception occurs in the try block, its send to the first catch block to process. If the catch block is not
-able to process it, it forwards the request to next object in chain i.e next catch block. If even the last catch block
+So when any exception occurs in the `try` block, its send to the first `catch` block to process. If the `catch` block is not
+able to process it, it forwards the request to next object in chain i.e next `catch` block. If even the last `catch` block
 is not able to process it, the exception is thrown outside of the chain to the calling program.
 
 More examples:
 
-```
+```java
 java.util.logging.Logger#log()
 javax.servlet.Filter#doFilter()
 ```
@@ -65,7 +65,7 @@ javax.servlet.Filter#doFilter()
 
 We can create a class Currency that will store the amount to dispense and used by the chain implementations.
 
-```
+```java
 public class Currency {
     private int amount;
 
@@ -84,7 +84,7 @@ request.
 
 Our ATM Dispense interface will look like below:
 
-```
+```java
 public interface DispenseChain {
     void setNextChain(DispenseChain nextChain);
     void dispense(Currency cur);
@@ -93,13 +93,13 @@ public interface DispenseChain {
 
 ### Chain Implementations
 
-We need to create different processor classes that will implement the DispenseChain interface and provide implementation
+We need to create different processor classes that will implement the `DispenseChain` interface and provide implementation
 of dispense methods.
 
-Since we are developing our system to work with three types of currency bills � $50, $20 and $10, we will create three
+Since we are developing our system to work with three types of currency bills - $50, $20 and $10, we will create three
 concrete implementations.
 
-```
+```java
 public class Dollar50Dispenser implements DispenseChain {
 
     private DispenseChain chain;
@@ -128,7 +128,7 @@ public class Dollar50Dispenser implements DispenseChain {
 }
 ```
 
-```
+```java
 public class Dollar20Dispenser implements DispenseChain {
 
     private DispenseChain chain;
@@ -157,7 +157,7 @@ public class Dollar20Dispenser implements DispenseChain {
 }
 ```
 
-```
+```java
 public class Dollar10Dispenser implements DispenseChain {
 
     private DispenseChain chain;
@@ -186,7 +186,7 @@ public class Dollar10Dispenser implements DispenseChain {
 }
 ```
 
-The important point to note here is the implementation of dispense method. You will notice that every implementation is
+The important point to note here is the implementation of `dispense` method. You will notice that every implementation is
 trying to process the request and based on the amount, it might process some or full part of it.
 
 If one of the chain not able to process it fully, it sends the request to the next processor in chain to process the
@@ -202,7 +202,7 @@ For example, in our implementation if we keep the first processor chain as `Doll
 then `Dollar20Dispenser`, then the request will never be forwarded to the second processor and the chain will become
 useless.
 
-```
+```java
 public class ATMDispenseChain {
 
     private DispenseChain c1;
@@ -242,7 +242,7 @@ public class ATMDispenseChain {
 }
 ```
 
-What is good about the CoR pattern is the complete decoupling between the client and the object chain that handles the
+What is good about the **CoR** pattern is the complete decoupling between the client and the object chain that handles the
 client's request.
 
 In this pattern, the first object in the chain receives the client request.
@@ -275,5 +275,5 @@ Also, the object who finally handles the request has no knowledge about the clie
   forwarded to a particular processor or there are no objects in the chain who are able to handle the request.
 
 
-- CoR pattern is good to achieve lose coupling but it comes with the trade-off of having a lot of implementation classes
+- **CoR** pattern is good to achieve lose coupling but it comes with the trade-off of having a lot of implementation classes
   and maintenance problems if most of the code is common in all the implementations.
