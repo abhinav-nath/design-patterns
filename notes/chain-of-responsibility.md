@@ -1,5 +1,7 @@
 ## Chain of Responsibility
 
+<img src="../images/chain-of-responsibility.png" width="450"/>
+
 **Chain of Responsibility** is a behavioral design pattern that lets you pass requests along a chain of handlers. Upon
 receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
 
@@ -43,12 +45,16 @@ javax.servlet.Filter#doFilter()
 
 ### Real World Example
 
-- ATM use the **Chain of Responsibility** in money giving mechanism.
+<img src="../images/chain_of_responsibility_example.png" width="300"/>
+
+- ATMs use the **Chain of Responsibility** in money vending mechanism.
 - The user enters the amount to be dispensed and the machine dispense amount in terms of defined currency bills such as
   `$50`, `$20`, `$10` etc.
 - If the user enters an amount that is not multiples of 10, it throws error.
 
 ### Checklist
+
+<img src="../images/chain_of_responsibility.png" width="700"/>
 
 1. The base class maintains a "next" pointer.
 2. Each derived class implements its contribution for handling the request.
@@ -62,7 +68,11 @@ javax.servlet.Filter#doFilter()
 
 ### Implementation
 
+<img src="../images/Chain-of-Responsibility-Pattern.png" width="350"/>
+
 #### Basic Classes and Interface
+
+<img src="../images/Command_Design_Pattern_UML.jpg" width="600"/>
 
 We can create a class `Currency` that will store the amount to dispense and used by the chain implementations.
 
