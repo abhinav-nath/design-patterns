@@ -61,21 +61,22 @@ and height.
   Principle we just saw above.
 
 ```java
+
 @Getter
 @Setter
 public class Rectangle {
 
-    private int width;
-    private int height;
+  private int width;
+  private int height;
 
-    public Rectangle(int width, int height) {
-        this.width = width;
-        this.height = height;
-    }
+  public Rectangle(int width, int height) {
+    this.width = width;
+    this.height = height;
+  }
 
-    public int computeArea() {
-        return width * height;
-    }
+  public int computeArea() {
+    return width * height;
+  }
 
 }
 ```
@@ -83,24 +84,24 @@ public class Rectangle {
 ```java
 public class Square extends Rectangle {
 
-    public Square(int side) {
-        super(side, side);
-    }
+  public Square(int side) {
+    super(side, side);
+  }
 
-    @Override
-    public void setHeight(int height) {
-        setSide(height);
-    }
+  @Override
+  public void setHeight(int height) {
+    setSide(height);
+  }
 
-    @Override
-    public void setWidth(int width) {
-        setSide(width);
-    }
+  @Override
+  public void setWidth(int width) {
+    setSide(width);
+  }
 
-    public void setSide(int side) {
-        super.setWidth(side);
-        super.setHeight(side);
-    }
+  public void setSide(int side) {
+    super.setWidth(side);
+    super.setHeight(side);
+  }
 
 }
 ```
@@ -117,24 +118,24 @@ But, by doing so we may break assumptions that clients of `Rectangle` make about
 ```java
 public class LSPViolation {
 
-    public static void main(String[] args) {
+  public static void main(String[] args) {
 
-        Rectangle rectangle = new Rectangle(10, 20);
-        clientMethod(rectangle);
+    Rectangle rectangle = new Rectangle(10, 20);
+    clientMethod(rectangle);
 
-        Square square = new Square(10);
-        clientMethod(square);
-    }
+    Square square = new Square(10);
+    clientMethod(square);
+  }
 
-    private static void clientMethod(Rectangle rectangle) {
-        rectangle.setWidth(5);
-        rectangle.setHeight(4);
+  private static void clientMethod(Rectangle rectangle) {
+    rectangle.setWidth(5);
+    rectangle.setHeight(4);
 
-        if (rectangle.computeArea() == 20)
-            System.out.println("Area is 20");
-        else
-            System.out.println("Area is not equal to 20");
-    }
+    if (rectangle.computeArea() == 20)
+      System.out.println("Area is 20");
+    else
+      System.out.println("Area is not equal to 20");
+  }
 }
 ```
 
@@ -150,6 +151,7 @@ from changing the height/width of a rectangle. Actually, it doesn't make sense t
 height of a square.
 
 ---
+
 
 ## Rectangle and Square - LSP Compliant Solution
 
@@ -194,34 +196,40 @@ if
 objects of type T in a program P may be replaced by objects of type S without altering any of the properties of P
 ```
 
-
 ---
+
 
 ## Another Example of LSP violation
 
 ```java
 class TrasportationDevice {
-   String name;
-   String getName() { ... }
-   void setName(String n) { ... }
+  String name;
 
-   double speed;
-   double getSpeed() { ... }
-   void setSpeed(double d) { ... }
+  String getName() { ...}
 
-   Engine engine;
-   Engine getEngine() { ... }
-   void setEngine(Engine e) { ... }
+  void setName(String n) { ...}
 
-   void startEngine() { ... }
+  double speed;
+
+  double getSpeed() { ...}
+
+  void setSpeed(double d) { ...}
+
+  Engine engine;
+
+  Engine getEngine() { ...}
+
+  void setEngine(Engine e) { ...}
+
+  void startEngine() { ...}
 }
 ```
 
 ```java
 class Car extends TransportationDevice {
 
-   @Override
-   void startEngine() { ... }
+  @Override
+  void startEngine() { ...}
 }
 ```
 
@@ -235,8 +243,8 @@ Let's add another transportation device:
 ```java
 class Bicycle extends TransportationDevice {
 
-   @Override
-   void startEngine()  /* problem !! */
+  @Override
+  void startEngine()  /* problem !! */
 }
 ```
 
@@ -259,14 +267,16 @@ We can refactor our `TransportationDevice` class as follows:
 ```java
 class TrasportationDevice {
 
-   String name;
-   double speed;
+  String name;
+  double speed;
 
-   String getName() { ... }
-   void setName(String n) { ... }
+  String getName() { ... }
 
-   double getSpeed() { ... }
-   void setSpeed(double d) { ... }
+  void setName(String n) { ... }
+
+  double getSpeed() { ... }
+
+  void setSpeed(double d) { ... }
 }
 ```
 
@@ -274,7 +284,7 @@ Now we can extend `TransportationDevice` for non-motorized devices.
 
 ```java
 class DeviceWithoutEngine extends TransportationDevice {
-   void startMoving() { ... }
+  void startMoving() { ...}
 }
 ```
 
@@ -283,12 +293,13 @@ And extend `TransportationDevice` for motorized devices. Here is is more appropr
 ```java
 class DeviceWithEngine extends TransportationDevice {
 
-   Engine engine;
+  Engine engine;
 
-   Engine getEngine() { ... }
-   void setEngine(Engine e) { ... }
+  Engine getEngine() { ...}
 
-   void startEngine() { ... }
+  void setEngine(Engine e) { ...}
+
+  void startEngine() { ...}
 
 }
 ```
@@ -298,8 +309,8 @@ Thus our `Car` class becomes more specialized, while adhering to the Liskov Subs
 ```java
 class Car extends DeviceWithEngine {
 
-   @Override
-   void startEngine() { ... }
+  @Override
+  void startEngine() { ...}
 
 }
 ```
@@ -309,8 +320,8 @@ And our `Bicycle` class is also in compliance with the Liskov Substitution Princ
 ```java
 class Bicycle extends DeviceWithoutEngine {
 
-   @Override
-   void startMoving() { ... }
+  @Override
+  void startMoving() { ...}
 
 }
 ```

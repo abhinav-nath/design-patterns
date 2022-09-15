@@ -46,9 +46,9 @@ Pentagon implements Shape
 And the `AreaCalculator` class changes now has one method which takes the Shape as an argument :
 
 ```java
-    public double calculateShapeArea(Shape shape) {
-	   return shape.calculateArea();
-	}
+public double calculateShapeArea(Shape shape) {
+  return shape.calculateArea();
+}
 ```
 
 
@@ -101,9 +101,9 @@ So this interface violates ISP - it is a **"polluted"** or a **"fat"** interface
 
 ```java
 public interface MachineViolatingISP {
-  public void print(Document d);
-  public void scan(Document d);
-  public void fax(Document d);
+  void print(Document d);
+  void scan(Document d);
+  void fax(Document d);
 }
 ```
 

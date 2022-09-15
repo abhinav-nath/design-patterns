@@ -37,29 +37,29 @@ If we keep our classes just with one responsibility, it does the following:
 ```java
 public class Service {
 
-    public void insertStudent(Student student) {
-        // insert student
-    }
+  public void insertStudent(Student student) {
+    // insert student
+  }
 
-    public void updateStudent(Student student) {
-        // update student
-    }
+  public void updateStudent(Student student) {
+    // update student
+  }
 
-    public void deleteStudent(Student student) {
-        // delete student
-    }
+  public void deleteStudent(Student student) {
+    // delete student
+  }
 
-    public void insertCourse(Course course) {
-        // insert course
-    }
+  public void insertCourse(Course course) {
+    // insert course
+  }
 
-    public void updateCourse(Course course) {
-        // update course
-    }
+  public void updateCourse(Course course) {
+    // update course
+  }
 
-    public void deleteCourse(Course course) {
-        // delete course
-    }
+  public void deleteCourse(Course course) {
+    // delete course
+  }
 }
 ```
 
@@ -74,34 +74,34 @@ for `Student (StudentService.java)` and `Course (CourseService.java)`.
 ```java
 public class CourseService {
 
-    public void insert(Course course) {
-        // insert course
-    }
+  public void insert(Course course) {
+    // insert course
+  }
 
-    public void update(Course course) {
-        // update course
-    }
+  public void update(Course course) {
+    // update course
+  }
 
-    public void delete(Course course) {
-        // delete course
-    }
+  public void delete(Course course) {
+    // delete course
+  }
 }
 ```
 
 ```java
 public class StudentService {
 
-    public void insert(Student student) {
-        // insert student
-    }
+  public void insert(Student student) {
+    // insert student
+  }
 
-    public void update(Student student) {
-        // update student
-    }
+  public void update(Student student) {
+    // update student
+  }
 
-    public void delete(Student student) {
-        // delete student
-    }
+  public void delete(Student student) {
+    // delete student
+  }
 }
 ```
 
@@ -114,29 +114,29 @@ Let's consider this classic example in Java **objects that can print themselves*
 ```java
 class Text {
 
-    String text;
-    String author;
-    int length;
+  String text;
+  String author;
+  int length;
 
-    String getText() { ... }
+  String getText() { ... }
 
-    void setText(String s) { ... }
+  void setText(String s) { ... }
 
-    String getAuthor() { ... }
+  String getAuthor() { ... }
 
-    void setAuthor(String s) { ... }
+  void setAuthor(String s) { ... }
 
-    int getLength() { ... }
+  int getLength() { ... }
 
-    void setLength(int k) { ... }
+  void setLength(int k) { ... }
 
-    // methods that change the text
-    void allLettersToUpperCase() { ... }
+  // methods that change the text
+  void allLettersToUpperCase() { ... }
 
-    void findSubTextAndDelete(String s) { ... }
+  void findSubTextAndDelete(String s) { ... }
 
-    // method for formatting output
-    void printText() { ... }
+  // method for formatting output
+  void printText() { ... }
 
 }
 ```

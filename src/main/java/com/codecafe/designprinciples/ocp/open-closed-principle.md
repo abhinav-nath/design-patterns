@@ -12,8 +12,8 @@ We start with creating a class for our first shape `Rectangle` which has 2 attri
 
 ```java
 public class Rectangle {
-    public double length;
-    public double width;
+  public double length;
+  public double width;
 }
 ```
 
@@ -33,7 +33,7 @@ attribute radius:
 
 ```java
 public class Circle {
-    public double radius;
+  public double radius;
 }
 ```
 
@@ -42,13 +42,13 @@ Then we modify `AreaCalculator` class to add circle calculations through a new m
 ```java
 public class AreaCalculator {
 
-    public double calculateRectangleArea(Rectangle rectangle) {
-        return rectangle.length * rectangle.width;
-    }
+  public double calculateRectangleArea(Rectangle rectangle) {
+    return rectangle.length * rectangle.width;
+  }
 
-    public double calculateCircleArea(Circle circle) {
-        return (22/7) * circle.radius * circle.radius;
-    }
+  public double calculateCircleArea(Circle circle) {
+    return (22 / 7) * circle.radius * circle.radius;
+  }
 }
 ```
 
@@ -75,25 +75,25 @@ For this we need to first define a base type `Shape` and have `Circle` & `Rectan
 
 ```java
 public interface Shape {
-    public double calculateArea();
+  double calculateArea();
 }
 ```
 
 ```java
 public class Rectangle implements Shape {
 
-    private double length;
-    private double width;
+  private double length;
+  private double width;
 
-    public Rectangle(double length, double width) {
-        this.length = length;
-        this.width = width;
-    }
+  public Rectangle(double length, double width) {
+    this.length = length;
+    this.width = width;
+  }
 
-    @Override
-    public double calculateArea() {
-        return length * width;
-    }
+  @Override
+  public double calculateArea() {
+    return length * width;
+  }
 
 }
 ```
@@ -101,16 +101,16 @@ public class Rectangle implements Shape {
 ```java
 public class Circle implements Shape {
 
-    private double radius;
+  private double radius;
 
-    public Circle(double radius) {
-        this.radius = radius;
-    }
+  public Circle(double radius) {
+    this.radius = radius;
+  }
 
-    @Override
-    public double calculateArea() {
-        return (22 / 7) * radius * radius;
-    }
+  @Override
+  public double calculateArea() {
+    return (22 / 7) * radius * radius;
+  }
 
 }
 ```
@@ -133,9 +133,9 @@ would now look like this:
 ```java
 public class AreaCalculator {
 
-    public double calculateShapeArea(Shape shape) {
-        return shape.calculateArea();
-    }
+  public double calculateShapeArea(Shape shape) {
+    return shape.calculateArea();
+  }
 
 }
 ```

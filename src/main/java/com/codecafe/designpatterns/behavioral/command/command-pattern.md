@@ -26,17 +26,17 @@ The central ideas of this design pattern closely mirror the semantics of **first
 Specifically, the invoker object is a higher-order function of which the command object is a first-class argument.
 
 
-1. Command declares an interface for all commands, providing a simple execute() method which asks the Receiver of the command to carry out an operation.
+1. `Command` declares an interface for all commands, providing a simple `execute()` method which asks the `Receiver` of the command to carry out an operation.
 
-2. The Receiver has the knowledge of what to do to carry out the request.
+2. The `Receiver` has the knowledge of what to do to carry out the request.
 
-3. The Invoker holds a command and can get the Command to execute a request by calling the execute method.
+3. The `Invoker` holds a command and can get the Command to execute a request by calling the execute method.
 
-4. The Client creates ConcreteCommands and sets a Receiver for the command.
+4. The `Client` creates `ConcreteCommand`s and sets a `Receiver` for the command.
 
-5. The ConcreteCommand defines a binding between the action and the receiver.
+5. The `ConcreteCommand` defines a binding between the action and the receiver.
 
-6. When the Invoker calls execute the ConcreteCommand will run one or more actions on the Receiver.
+6. When the `Invoker` calls `execute()`, the `ConcreteCommand` will run one or more actions on the `Receiver`.
 
 
 > Think of a command in a metaphorical sense; a trained soldier is given a command by his/her commanding officer, and on demand the soldier executes this command.
@@ -59,32 +59,32 @@ If that is not a requirement for you then the pattern is probably not helpful fo
 
 ```java
 interface Command {
-    void execute();
+  void execute();
 }
 ```
 
 ```java
 class Light {
-    public Command turnOn();
-    public Command turnOff();
+  public Command turnOn();
+  public Command turnOff();
 }
 ```
 
 ```java
 class AirConditioner {
-    public Command setThermostat(Temperature temperature);
+  public Command setThermostat(Temperature temperature);
 }
 ```
 
 ```java
 class Button {
-    public Button(String text, Command onPush);
+  public Button(String text, Command onPush);
 }
 ```
 
 ```java
 class Scheduler {
-    public void addScheduledCommand(Time timeToExecute, Command command);
+  public void addScheduledCommand(Time timeToExecute, Command command);
 }
 ```
 
@@ -96,8 +96,8 @@ scheduler.addScheduledCommand(new Time("15:12:07"), airCon.setThermostat(27));
 scheduler.addScheduledCommand(new Time("15:13:02"), light.turnOff());
 ```
 
-As you can see the Button and Scheduler don't need to know anything at all about the commands.
-Scheduler is an example of a class that might hold a collection of commands.
+As you can see the `Button` and `Scheduler` don't need to know anything at all about the commands.
+`Scheduler` is an example of a class that might hold a collection of commands.
 
 We can use this pattern to do transition from a method-oriented interface to a command-oriented interface.
 That means, we are encapsulating method calls into concrete commands along with necessary data.
