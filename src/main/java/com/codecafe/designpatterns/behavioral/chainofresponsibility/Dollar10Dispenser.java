@@ -1,4 +1,4 @@
-package com.codecafe.designpatterns.behavioral.chainofresponsibility.example;
+package com.codecafe.designpatterns.behavioral.chainofresponsibility;
 
 public class Dollar10Dispenser implements DispenseChain {
 

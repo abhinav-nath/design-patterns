@@ -1,9 +1,9 @@
-package com.codecafe.designpatterns.behavioral.command.example;
+package com.codecafe.designpatterns.behavioral.command;
 
 /* Concrete Command */
 public class OnCommand implements Command {
 
-  private Receiver receiver;
+  private final Receiver receiver;
 
   public OnCommand(Receiver receiver) {
     this.receiver = receiver;

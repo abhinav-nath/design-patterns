@@ -1,9 +1,12 @@
 package com.codecafe.designpatterns.behavioral.observer.example1;
 
+/*
+  Using Observable class and Observer Interface
+ */
+
 public class Main {
 
   public static void main(String[] args) {
-
     MessagePublisher messagePublisher = new MessagePublisher();
 
     MessageSubscriber subscriber1 = new MessageSubscriber("Subscriber1");
@@ -19,7 +22,6 @@ public class Main {
     System.out.println();
 
     messagePublisher.publishMessage("Hello World!");
-
   }
 
 }

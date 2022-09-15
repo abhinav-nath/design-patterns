@@ -1,8 +1,8 @@
-package com.codecafe.designpatterns.behavioral.command.example;
+package com.codecafe.designpatterns.behavioral.command;
 
 public class Invoker {
 
-  private Command command;
+  private final Command command;
 
   public Invoker(Command command) {
     this.command = command;

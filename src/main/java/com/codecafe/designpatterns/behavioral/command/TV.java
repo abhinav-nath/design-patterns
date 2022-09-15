@@ -1,4 +1,4 @@
-package com.codecafe.designpatterns.behavioral.command.example;
+package com.codecafe.designpatterns.behavioral.command;
 
 public class TV implements Receiver {
 

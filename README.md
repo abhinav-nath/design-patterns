@@ -2,11 +2,11 @@
 
 #### SOLID
 
-- [Single Responsibility Principle](./src/main/java/com/codecafe/designprinciples/srp/single-responsibility-principle.md)
-- [Open Closed Principle](./src/main/java/com/codecafe/designprinciples/ocp/open-closed-principle.md)
-- [Liskov Substitution Principle](./src/main/java/com/codecafe/designprinciples/lsp/liskov-substitution-principle.md)
-- [Interface Segregation Principle](./src/main/java/com/codecafe/designprinciples/isp)
-- [Dependency Inversion Principle](./src/main/java/com/codecafe/designprinciples/dip)
+- [Single Responsibility Principle](notes/single-responsibility-principle.md)&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designprinciples/srp)
+- [Open Closed Principle](notes/open-closed-principle.md)&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designprinciples/ocp)
+- [Liskov Substitution Principle](notes/liskov-substitution-principle.md)&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designprinciples/lsp)
+- [Interface Segregation Principle](notes/ISP.pdf)&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designprinciples/isp)
+- [Dependency Inversion Principle](notes/DIP.pdf)&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designprinciples/dip)
 
 ---
 
@@ -14,24 +14,22 @@
 
 #### Creational Design Patterns
 
-- [Singleton](./src/main/java/com/codecafe/designpatterns/creational/singleton)
-- [Builder](./src/main/java/com/codecafe/designpatterns/creational/builder)
-- [Factory Method](./src/main/java/com/codecafe/designpatterns/creational/factorymethod)
-- [Abstract Factory](./src/main/java/com/codecafe/designpatterns/creational/abstractfactory)
-- [Prototype](./src/main/java/com/codecafe/designpatterns/creational/prototype)
+- [Singleton]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/creational/singleton)
+- [Builder]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/creational/builder)
+- [Factory Method]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/creational/factorymethod)
+- [Abstract Factory]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/creational/abstractfactory)
+- [Prototype]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/creational/prototype)
 
 #### Behavioral Design Patterns
 
-- [Chain of Responsibility](./src/main/java/com/codecafe/designpatterns/behavioral/chainofresponsibility)
-- [Command](./src/main/java/com/codecafe/designpatterns/behavioral/command)
-- [Strategy](./src/main/java/com/codecafe/designpatterns/behavioral/strategy)
-- [Observer](./src/main/java/com/codecafe/designpatterns/behavioral/observer)
-  - [Using Observable class and Observer Interface](./src/main/java/com/codecafe/designpatterns/behavioral/observer/example1)
-  - [Custom thread-safe implementation](./src/main/java/com/codecafe/designpatterns/behavioral/observer/example2)
+- [Chain of Responsibility](notes/chain-of-responsibility.md)&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/behavioral/chainofresponsibility)
+- [Command](notes/command-pattern.md)&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/behavioral/command)
+- [Strategy]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/behavioral/strategy)
+- [Observer]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/behavioral/observer)
 
 #### Structural Design Patterns
 
-- [Adapter](./src/main/java/com/codecafe/designpatterns/structural/adapter)
-- [Bridge](./src/main/java/com/codecafe/designpatterns/structural/bridge)
-- [Composite](./src/main/java/com/codecafe/designpatterns/structural/composite)
-- [Decorator](./src/main/java/com/codecafe/designpatterns/structural/decorator)
+- [Adapter]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/structural/adapter)
+- [Bridge]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/structural/bridge)
+- [Composite]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/structural/composite)
+- [Decorator]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/structural/decorator)

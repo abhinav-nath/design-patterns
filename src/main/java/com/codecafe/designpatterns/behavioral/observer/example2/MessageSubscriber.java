@@ -2,7 +2,7 @@ package com.codecafe.designpatterns.behavioral.observer.example2;
 
 public class MessageSubscriber implements ISubscriber {
 
-  private String subscriberName;
+  private final String subscriberName;
   private IPublisher publisher;
 
   public MessageSubscriber(String subscriberName) {

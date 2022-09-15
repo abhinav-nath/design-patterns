@@ -1,9 +1,12 @@
 package com.codecafe.designpatterns.behavioral.observer.example2;
 
+/*
+  Custom thread-safe implementation
+ */
+
 public class Main {
 
   public static void main(String[] args) {
-
     // create a message publisher
     MessagePublisher messagePublisher = new MessagePublisher();
 
@@ -37,7 +40,6 @@ public class Main {
 
     // send another message
     messagePublisher.postMessage("Hakuna Matata!");
-
   }
 
 }

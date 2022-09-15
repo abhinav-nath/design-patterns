@@ -1,9 +1,8 @@
-package com.codecafe.designpatterns.behavioral.command.example;
+package com.codecafe.designpatterns.behavioral.command;
 
 public class Main {
 
-  public static void main(String args[]) {
-
+  public static void main(String[] args) {
     Receiver tv = new TV();
     Command onCommand = new OnCommand(tv);
     Invoker invoker = new Invoker(onCommand);
@@ -22,4 +21,5 @@ public class Main {
     invoker = new Invoker(offCommand);
     invoker.execute();
   }
+
 }

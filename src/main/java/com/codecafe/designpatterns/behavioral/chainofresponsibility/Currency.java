@@ -1,8 +1,8 @@
-package com.codecafe.designpatterns.behavioral.chainofresponsibility.example;
+package com.codecafe.designpatterns.behavioral.chainofresponsibility;
 
 public class Currency {
 
-  private int amount;
+  private final int amount;
 
   public Currency(int amount) {
     this.amount = amount;

@@ -5,10 +5,10 @@ import java.util.List;
 
 public class MessagePublisher implements IPublisher {
 
-  private List<ISubscriber> subscribers;
+  private final List<ISubscriber> subscribers;
   private String message;
   private boolean changed;
-  private final Object MONITOR = new Object();
+  private final Object monitorObj = new Object();
 
   public MessagePublisher() {
     this.subscribers = new ArrayList<>();
@@ -16,11 +16,10 @@ public class MessagePublisher implements IPublisher {
 
   @Override
   public void attach(ISubscriber subscriber) {
-
     if (subscriber == null)
       throw new NullPointerException("Null Observer");
 
-    synchronized (MONITOR) {
+    synchronized (monitorObj) {
       if (!subscribers.contains(subscriber)) {
         subscribers.add(subscriber);
         System.out.println(subscriber.getSubscriberName() + " attached");
@@ -30,7 +29,7 @@ public class MessagePublisher implements IPublisher {
 
   @Override
   public void detach(ISubscriber subscriber) {
-    synchronized (MONITOR) {
+    synchronized (monitorObj) {
       subscribers.remove(subscriber);
       System.out.println(subscriber.getSubscriberName() + " detached");
     }
@@ -38,12 +37,11 @@ public class MessagePublisher implements IPublisher {
 
   @Override
   public void notifySubscribers() {
-
-    List<ISubscriber> subscribersLocal = null;
+    List<ISubscriber> subscribersLocal;
     // synchronization is used to make sure any observer registered
     // after message is received is not notified
 
-    synchronized (MONITOR) {
+    synchronized (monitorObj) {
       if (!changed)
         return;
       subscribersLocal = new ArrayList<>(this.subscribers);
@@ -52,7 +50,6 @@ public class MessagePublisher implements IPublisher {
 
     for (ISubscriber sub : subscribersLocal)
       sub.update();
-
   }
 
   @Override

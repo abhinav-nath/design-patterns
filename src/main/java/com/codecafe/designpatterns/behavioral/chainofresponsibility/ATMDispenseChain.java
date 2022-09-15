@@ -1,10 +1,10 @@
-package com.codecafe.designpatterns.behavioral.chainofresponsibility.example;
+package com.codecafe.designpatterns.behavioral.chainofresponsibility;
 
 import java.util.Scanner;
 
 public class ATMDispenseChain {
 
-  private DispenseChain c1;
+  private final DispenseChain c1;
 
   public ATMDispenseChain() {
     // initialize the chain
@@ -21,7 +21,7 @@ public class ATMDispenseChain {
     ATMDispenseChain atmDispenser = new ATMDispenseChain();
 
     while (true) {
-      int amount = 0;
+      int amount;
       System.out.println("Enter amount to dispense");
       Scanner sc = new Scanner(System.in);
       amount = sc.nextInt();
