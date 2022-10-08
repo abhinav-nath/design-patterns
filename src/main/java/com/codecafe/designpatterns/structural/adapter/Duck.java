@@ -2,8 +2,8 @@ package com.codecafe.designpatterns.structural.adapter;
 
 public interface Duck {
 
-  public void quack();
+  void quack();
 
-  public void fly();
+  void fly();
 
 }

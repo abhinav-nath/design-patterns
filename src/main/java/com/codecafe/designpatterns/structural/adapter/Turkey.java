@@ -2,8 +2,8 @@ package com.codecafe.designpatterns.structural.adapter;
 
 public interface Turkey {
 
-  public void gobble();
+  void gobble();
 
-  public void fly();
+  void fly();
 
 }
