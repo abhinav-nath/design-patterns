@@ -29,9 +29,11 @@
 
 #### Structural Design Patterns
 
-- [Adapter]()&nbsp;&nbsp;&nbsp;&nbsp
-  - [Example 1 - Duck and Turkey](src/main/java/com/codecafe/designpatterns/structural/adapter/example1)
-  - [Example 1 - Fitting square pegs into round holes](src/main/java/com/codecafe/designpatterns/structural/adapter/example2)
-- [Bridge]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/structural/bridge)
+- [Adapter](notes/adapter-pattern.md)
+  - [Duck and Turkey](src/main/java/com/codecafe/designpatterns/structural/adapter/example1)
+  - [Fitting square pegs into round holes](src/main/java/com/codecafe/designpatterns/structural/adapter/example2)
+- [Bridge]()
+  - [Sending SMS and Email messages](src/main/java/com/codecafe/designpatterns/structural/bridge)
 - [Composite]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/structural/composite)
-- [Decorator]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/structural/decorator)
+- [Decorator]()
+  - [Converting basic car to luxury sports car](src/main/java/com/codecafe/designpatterns/structural/decorator)
