@@ -20,7 +20,6 @@ package com.codecafe.designpatterns.creational.abstractfactory.example1;
 public class AbstractFactoryDemo {
 
   public static void main(String[] args) {
-
     IShapeFactory shapeFactory = FactoryProducer.getFactory(false);
 
     IShape shape1 = shapeFactory.getShape("RECTANGLE");
@@ -36,7 +35,6 @@ public class AbstractFactoryDemo {
 
     IShape shape4 = shapeFactory.getShape("SQUARE");
     shape4.draw();
-
   }
 
 }

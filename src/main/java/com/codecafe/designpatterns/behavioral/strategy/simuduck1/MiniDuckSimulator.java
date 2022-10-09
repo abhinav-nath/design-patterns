@@ -3,7 +3,6 @@ package com.codecafe.designpatterns.behavioral.strategy.simuduck1;
 public class MiniDuckSimulator {
 
   public static void main(String[] args) {
-
     Duck mallard = new MallardDuck();
     mallard.display();
     mallard.fly();
@@ -25,7 +24,6 @@ public class MiniDuckSimulator {
     rubberDuck.fly(); // A Rubber Duck is not supposed to fly !!
     rubberDuck.quack(); // A Rubber Duck doesn't quack, it squeeks !!
     rubberDuck.swim();
-
   }
 
 }

@@ -9,7 +9,6 @@ public class TextMessage extends Message {
   @Override
   public void send(String messageText) {
     messageSender.sendMessage(messageText);
-
   }
 
 }

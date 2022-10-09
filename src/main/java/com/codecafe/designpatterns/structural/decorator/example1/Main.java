@@ -15,6 +15,8 @@ public class Main {
 
     Car luxurySportsCar = new SportsCar(new LuxuryCar(new BasicCar()));
     luxurySportsCar.assemble();
+
+    System.out.println();
   }
 
 }

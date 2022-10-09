@@ -2,12 +2,12 @@ package com.codecafe.designpatterns.creational.builder.example3;
 
 public interface MealBuilder {
 
-  public void buildDrink();
+  void buildDrink();
 
-  public void buildMainCourse();
+  void buildMainCourse();
 
-  public void buildSide();
+  void buildSide();
 
-  public Meal getMeal();
+  Meal getMeal();
 
 }

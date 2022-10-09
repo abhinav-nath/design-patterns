@@ -2,7 +2,7 @@ package com.codecafe.designprinciples.dip.example1.violation;
 
 public class ElectricPowerSwitch {
 
-  private LightBulb lightBulb;
+  private final LightBulb lightBulb;
   private boolean on;
 
   public ElectricPowerSwitch(LightBulb lightBulb) {

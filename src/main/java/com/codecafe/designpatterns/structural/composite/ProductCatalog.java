@@ -42,4 +42,5 @@ public class ProductCatalog extends CatalogComponent {
   public void remove(CatalogComponent catalogComponent) {
     items.remove(catalogComponent);
   }
+
 }

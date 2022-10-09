@@ -2,8 +2,7 @@ package com.codecafe.designpatterns.creational.builder.example2;
 
 public class StringBuilderDemo {
 
-  public static void main(String args[]) {
-
+  public static void main(String[] args) {
     String hello = "hello";
     System.out.println("<p>" + hello + "</p>");
 

@@ -12,4 +12,5 @@ public class SmallCar extends Car {
     System.out.println("Building small car");
     // add accessories
   }
+
 }

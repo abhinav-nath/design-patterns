@@ -3,7 +3,6 @@ package com.codecafe.designprinciples.ocp.example2;
 public class AreaCalculatorDemo {
 
   public static void main(String[] args) {
-
     AreaCalculator ac = new AreaCalculator();
 
     Shape square = new Square(10);

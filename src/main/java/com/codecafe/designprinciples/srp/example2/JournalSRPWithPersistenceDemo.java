@@ -8,8 +8,8 @@ import java.util.List;
 // class adhering to SRP
 class JournalSRPWithPersistence {
 
-  private final List<String> entries = new ArrayList<>();
   private static int count = 0;
+  private final List<String> entries = new ArrayList<>();
 
   public void addEntry(String text) {
     entries.add("" + (++count) + ": " + text);
@@ -26,12 +26,13 @@ class JournalSRPWithPersistence {
 
 }
 
-/*
+/**
  * here we will keep our Persistence code, not just for Journal but for other
  * classes as well and separate out the persistence concern from the Journal
  * class
  */
 class Persistence {
+
   public void saveToFile(JournalSRPWithPersistence journal, String fileName, boolean overwrite) {
     if (overwrite || new File(fileName).exists()) {
       PrintStream out = null;
@@ -55,8 +56,7 @@ class Persistence {
 
 public class JournalSRPWithPersistenceDemo {
 
-  public static void main(String args[]) throws Exception {
-
+  public static void main(String[] args) throws Exception {
     JournalSRPWithPersistence j = new JournalSRPWithPersistence();
     j.addEntry("I cried today");
     j.addEntry("I ate a bug");

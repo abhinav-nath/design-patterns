@@ -9,14 +9,11 @@ public class MealFactoryProducer {
 
   public static MealFactory getMealFactory(MealTypes mealType) {
 
-    if (MealTypes.INDIAN.equals(mealType)) {
-      return new IndianMealFactory();
-    } else if (MealTypes.ITALIAN.equals(mealType)) {
-      return new ItalianMealFactory();
-    }
-    if (MealTypes.JAPANESE.equals(mealType)) {
-      return new JapaneseMealFactory();
-    }
-    return null;
+    return switch (mealType) {
+      case INDIAN -> new IndianMealFactory();
+      case ITALIAN -> new ItalianMealFactory();
+      case JAPANESE -> new JapaneseMealFactory();
+    };
   }
+
 }

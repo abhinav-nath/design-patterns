@@ -7,6 +7,6 @@ public abstract class Duck {
   }
 
   // The display() method is abstract since all duck subtypes look different
-  public abstract void display(); //
+  public abstract void display();
 
 }

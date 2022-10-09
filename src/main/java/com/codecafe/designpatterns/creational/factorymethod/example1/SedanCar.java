@@ -12,4 +12,5 @@ public class SedanCar extends Car {
     System.out.println("Building sedan car");
     // add accessories
   }
+
 }

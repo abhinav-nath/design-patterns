@@ -3,7 +3,6 @@ package com.codecafe.designprinciples.lsp.example1;
 public class LSPViolation {
 
   public static void main(String[] args) {
-
     Rectangle rectangle = new Rectangle(10, 20);
     clientMethod(rectangle);
 
@@ -12,15 +11,16 @@ public class LSPViolation {
   }
 
   private static void clientMethod(Rectangle rectangle) {
-
-    // overriding setter methods of Rectangle class inside Square class
-    // results into violation of LSP
+    /*
+      overriding setter methods of Rectangle class inside Square class
+      results into violation of LSP
+     */
     rectangle.setWidth(5);   // square's sides will be set to 5
     rectangle.setHeight(4);  // square's sides will be set to 4
 
     /*
-     * Enable Assertions  : VM arg  -ea or -enableassertions
-     * Disable Assertions : VM arg  -da or -disableassertions
+      Enable Assertions  : VM arg  -ea or -enableassertions
+      Disable Assertions : VM arg  -da or -disableassertions
      */
     assert rectangle.computeArea() == 20 : printError("area", rectangle);
   }

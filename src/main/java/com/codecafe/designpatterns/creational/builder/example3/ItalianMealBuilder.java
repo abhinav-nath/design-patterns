@@ -2,7 +2,7 @@ package com.codecafe.designpatterns.creational.builder.example3;
 
 public class ItalianMealBuilder implements MealBuilder {
 
-  private Meal meal;
+  private final Meal meal;
 
   public ItalianMealBuilder() {
     meal = new Meal();

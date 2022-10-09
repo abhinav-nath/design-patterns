@@ -11,4 +11,5 @@ public class DVDPlayer implements Receiver {
   public void switchOff() {
     System.out.println("DVD player switched off");
   }
+
 }

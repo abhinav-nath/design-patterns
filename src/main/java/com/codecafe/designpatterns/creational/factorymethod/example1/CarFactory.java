@@ -7,21 +7,12 @@ public class CarFactory {
     Car car = null;
 
     switch (model) {
-      case SMALL:
-        car = new SmallCar();
-        break;
-
-      case SEDAN:
-        car = new SedanCar();
-        break;
-
-      case LUXURY:
-        car = new LuxuryCar();
-        break;
-
-      default:
+      case SMALL -> car = new SmallCar();
+      case SEDAN -> car = new SedanCar();
+      case LUXURY -> car = new LuxuryCar();
+      default -> {
         // throw some exception
-        break;
+      }
     }
     return car;
   }

@@ -3,7 +3,6 @@ package com.codecafe.designpatterns.behavioral.strategy.simuduck4;
 public class MiniDuckSimulator {
 
   public static void main(String[] args) {
-
     Duck mallard = new MallardDuck();
     mallard.display();
     mallard.performQuack();

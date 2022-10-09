@@ -1,6 +1,6 @@
 package com.codecafe.designprinciples.srp.cohesion;
 
-/*
+/**
  * To increase the level of cohesion,
  * we should segregate the code based on the responsibilities
  */

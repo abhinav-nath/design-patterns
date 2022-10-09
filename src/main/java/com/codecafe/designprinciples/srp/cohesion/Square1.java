@@ -1,6 +1,6 @@
 package com.codecafe.designprinciples.srp.cohesion;
 
-/*
+/**
  * The overall degree of cohesion of Square1 class is low
  * because there are unrelated methods inside the same class
  */
@@ -8,7 +8,7 @@ public class Square1 {
 
   int side = 5;
 
-  /*
+  /**
    * calculateArea() and calculatePerimeter() are cohesive (closely related)
    * because they deal with the measurements of a square
    */
@@ -20,7 +20,7 @@ public class Square1 {
     return side * 4;
   }
 
-  /*
+  /**
    * draw() and rotate() are cohesive because
    * they deal with rendering of the image
    */

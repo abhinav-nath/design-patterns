@@ -5,9 +5,11 @@ import com.codecafe.designpatterns.creational.abstractfactory.example2.maincours
 import com.codecafe.designpatterns.creational.abstractfactory.example2.side.Side;
 
 public interface MealFactory {
-  public Drink createDrink();
 
-  public MainCourse createMainCourse();
+  Drink createDrink();
 
-  public Side createSide();
+  MainCourse createMainCourse();
+
+  Side createSide();
+
 }

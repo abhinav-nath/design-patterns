@@ -25,7 +25,7 @@ class JournalWithSRP {
 }
 
 public class JournalWithSRPDemo {
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     JournalWithSRP j = new JournalWithSRP();
     j.addEntry("I cried today");
     j.addEntry("I ate a bug");

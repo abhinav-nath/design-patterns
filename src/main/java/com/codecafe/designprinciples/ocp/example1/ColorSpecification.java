@@ -2,7 +2,7 @@ package com.codecafe.designprinciples.ocp.example1;
 
 public class ColorSpecification implements Specification<Product> {
 
-  private Color color;
+  private final Color color;
 
   public ColorSpecification(Color color) {
     this.color = color;

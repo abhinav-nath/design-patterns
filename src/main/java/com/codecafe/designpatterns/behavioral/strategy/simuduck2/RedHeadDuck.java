@@ -14,4 +14,5 @@ public class RedHeadDuck extends Duck implements Flyable, Quackable {
   public void quack() {
     System.out.println("I'm quacking");
   }
+
 }

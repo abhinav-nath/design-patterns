@@ -13,7 +13,7 @@ public class Student {
   private Date dob;
   private String address;
 
-  /*
+  /**
    * save() method is tightly coupled to Student class
    * it should be moved to a separate StudentRepository class
    */

@@ -10,7 +10,17 @@ public class NutritionFacts {
   private final int carbohydrate;     // (g/serving)          optional
 
 
+  private NutritionFacts(Builder builder) {
+    servingSize = builder.servingSize;
+    servings = builder.servings;
+    calories = builder.calories;
+    fat = builder.fat;
+    sodium = builder.sodium;
+    carbohydrate = builder.carbohydrate;
+  }
+
   public static class Builder {
+
     // Required Parameters
     private final int servingSize;
     private final int servings;
@@ -50,15 +60,6 @@ public class NutritionFacts {
       return new NutritionFacts(this);
     }
 
-  }
-
-  private NutritionFacts(Builder builder) {
-    servingSize = builder.servingSize;
-    servings = builder.servings;
-    calories = builder.calories;
-    fat = builder.fat;
-    sodium = builder.sodium;
-    carbohydrate = builder.carbohydrate;
   }
 
 }

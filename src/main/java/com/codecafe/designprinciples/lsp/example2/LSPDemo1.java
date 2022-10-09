@@ -3,7 +3,6 @@ package com.codecafe.designprinciples.lsp.example2;
 public class LSPDemo1 {
 
   public static void main(String[] args) {
-
     Vehicle vehicle = new Car(); // LSP
     vehicle.setSpeed(200);
     vehicle.setCubicCapacity(3000);

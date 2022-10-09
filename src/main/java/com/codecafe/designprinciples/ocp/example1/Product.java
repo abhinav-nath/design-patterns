@@ -10,9 +10,9 @@ enum Size {
 
 public class Product {
 
-  public String name;
-  public Color color;
-  public Size size;
+  public final String name;
+  public final Color color;
+  public final Size size;
 
   public Product(String name, Color color, Size size) {
     super();

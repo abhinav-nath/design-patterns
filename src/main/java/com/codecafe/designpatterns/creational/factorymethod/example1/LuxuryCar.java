@@ -12,4 +12,5 @@ public class LuxuryCar extends Car {
     System.out.println("Building luxury car");
     // add accessories
   }
+
 }

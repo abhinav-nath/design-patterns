@@ -2,7 +2,7 @@ package com.codecafe.designprinciples.ocp.example2;
 
 public class Square implements Shape {
 
-  private double length;
+  private final double length;
 
   public Square(double length) {
     this.length = length;

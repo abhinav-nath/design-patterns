@@ -2,7 +2,7 @@ package com.codecafe.designprinciples.ocp.example1;
 
 public class SizeSpecification implements Specification<Product> {
 
-  private Size size;
+  private final Size size;
 
   public SizeSpecification(Size size) {
     this.size = size;

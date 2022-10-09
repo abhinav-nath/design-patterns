@@ -7,40 +7,46 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-// A. High-level modules should not depend on low-level modules.
-//    Both should depend on abstractions.
-
-// B. Abstractions should not depend on details.
-//    Details should depend on abstractions.
+/**
+ * A. High-level modules should not depend on low-level modules.
+ * Both should depend on abstractions.
+ * B. Abstractions should not depend on details.
+ * Details should depend on abstractions.
+ */
 
 enum Relationship {
+
   PARENT, CHILD, SIBLING
+
+}
+
+interface RelationshipBrowser {
+
+  List<Person> findAllChildrenOf(String name);
+
 }
 
 class Person {
+
   public String name;
   // dob etc.
 
   public Person(String name) {
     this.name = name;
   }
-}
 
-interface RelationshipBrowser {
-  List<Person> findAllChildrenOf(String name);
 }
 
 class Relationships implements RelationshipBrowser {
 
-  public List<Person> findAllChildrenOf(String name) {
+  // Triplet class requires javatuples
+  private List<Triplet<Person, Relationship, Person>> relations = new ArrayList<>();
 
+  public List<Person> findAllChildrenOf(String name) {
     return relations.stream()
                     .filter(x -> Objects.equals(x.getValue0().name, name) && x.getValue1() == Relationship.PARENT)
                     .map(Triplet::getValue2).collect(Collectors.toList());
   }
-
-  // Triplet class requires javatuples
-  private List<Triplet<Person, Relationship, Person>> relations = new ArrayList<>();
 
   public List<Triplet<Person, Relationship, Person>> getRelations() {
     return relations;
@@ -54,6 +60,7 @@ class Relationships implements RelationshipBrowser {
 }
 
 class Research {
+
   public Research(Relationships relationships) {
     // high-level: find all of john's children
     List<Triplet<Person, Relationship, Person>> relations = relationships.getRelations();

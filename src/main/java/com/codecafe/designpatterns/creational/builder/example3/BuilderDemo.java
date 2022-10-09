@@ -29,7 +29,6 @@ package com.codecafe.designpatterns.creational.builder.example3;
 public class BuilderDemo {
 
   public static void main(String[] args) {
-
     MealBuilder mb = new ItalianMealBuilder();
     MealDirector md = new MealDirector(mb);
     md.constructMeal();
@@ -47,7 +46,6 @@ public class BuilderDemo {
     md.constructMeal();
     meal = md.getMeal();
     System.out.println("Meal is : " + meal);
-
   }
 
 }

@@ -13,4 +13,5 @@ public class RedWine implements Drink {
   public String getDrinkName() {
     return drinkName;
   }
+
 }

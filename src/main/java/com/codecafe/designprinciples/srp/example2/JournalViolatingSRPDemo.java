@@ -9,8 +9,8 @@ import java.util.List;
 // class violating SRP
 class JournalViolatingSRP {
 
-  private final List<String> entries = new ArrayList<>();
   private static int count = 0;
+  private final List<String> entries = new ArrayList<>();
 
   public void addEntry(String text) {
     entries.add("" + (++count) + ": " + text);
@@ -25,7 +25,7 @@ class JournalViolatingSRP {
     return String.join(System.lineSeparator(), entries);
   }
 
-  /*
+  /**
    * Violation of SRP - Journal is not only handling addition/removal of entries
    * but also persistence. Persistence is a separate concern
    */
@@ -52,11 +52,13 @@ class JournalViolatingSRP {
 }
 
 public class JournalViolatingSRPDemo {
-  public static void main(String args[]) throws Exception {
+
+  public static void main(String[] args) throws Exception {
     JournalViolatingSRP j = new JournalViolatingSRP();
     j.addEntry("I cried today");
     j.addEntry("I ate a bug");
 
     System.out.println(j);
   }
+
 }

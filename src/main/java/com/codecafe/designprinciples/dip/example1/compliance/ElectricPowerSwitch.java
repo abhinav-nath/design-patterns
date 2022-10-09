@@ -2,7 +2,7 @@ package com.codecafe.designprinciples.dip.example1.compliance;
 
 public class ElectricPowerSwitch implements Switch {
 
-  private Switchable device;
+  private final Switchable device;
   private boolean on;
 
   public ElectricPowerSwitch(Switchable device) {

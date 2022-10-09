@@ -11,7 +11,7 @@ package com.codecafe.designprinciples.isp;
 
 public class ISPdemo {
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     OldFashionedPrinter oldFashionedPrinter = new OldFashionedPrinter();
 
     oldFashionedPrinter.print(null);

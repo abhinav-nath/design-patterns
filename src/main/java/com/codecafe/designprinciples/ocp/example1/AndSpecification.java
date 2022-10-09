@@ -2,7 +2,8 @@ package com.codecafe.designprinciples.ocp.example1;
 
 public class AndSpecification<T> implements Specification<T> {
 
-  private Specification<T> first, second;
+  private final Specification<T> first;
+  private final Specification<T> second;
 
   public AndSpecification(Specification<T> first, Specification<T> second) {
     this.first = first;
