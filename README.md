@@ -29,7 +29,9 @@
 
 #### Structural Design Patterns
 
-- [Adapter]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/structural/adapter)
+- [Adapter]()&nbsp;&nbsp;&nbsp;&nbsp
+  - [Example 1 - Duck and Turkey](src/main/java/com/codecafe/designpatterns/structural/adapter/example1)
+  - [Example 1 - Fitting square pegs into round holes](src/main/java/com/codecafe/designpatterns/structural/adapter/example2)
 - [Bridge]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/structural/bridge)
 - [Composite]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/structural/composite)
 - [Decorator]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/structural/decorator)

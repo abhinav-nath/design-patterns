@@ -1,4 +1,4 @@
-package com.codecafe.designpatterns.structural.adapter;
+package com.codecafe.designpatterns.structural.adapter.example1;
 
 public class WildTurkey implements Turkey {
 
