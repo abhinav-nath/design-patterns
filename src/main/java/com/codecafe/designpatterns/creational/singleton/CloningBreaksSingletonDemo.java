@@ -17,13 +17,16 @@ class BasicSingleton implements Cloneable {
     // return super.clone(); -> this will break Singleton and create a new instance
     return INSTANCE; // fix
   }
+
 }
 
 public class CloningBreaksSingletonDemo {
+
   public static void main(String[] args) throws CloneNotSupportedException {
     BasicSingleton instance1 = BasicSingleton.getInstance();
     BasicSingleton instance2 = (BasicSingleton) instance1.clone();
     System.out.println("instance1 hashCode:- " + System.identityHashCode(instance1));
     System.out.println("instance2 hashCode:- " + System.identityHashCode(instance2));
   }
+
 }

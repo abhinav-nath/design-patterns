@@ -1,4 +1,4 @@
-package com.codecafe.designpatterns.creational.singleton;
+package com.codecafe.designpatterns.creational.singleton.eager_initialization;
 
 public class BasicEagerSingleton {
 
@@ -6,6 +6,7 @@ public class BasicEagerSingleton {
 
   int value = 0;
 
+  // private constructor
   private BasicEagerSingleton() {
   }
 

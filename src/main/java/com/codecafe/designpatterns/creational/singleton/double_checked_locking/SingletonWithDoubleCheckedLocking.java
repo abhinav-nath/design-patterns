@@ -1,4 +1,4 @@
-package com.codecafe.designpatterns.creational.singleton;
+package com.codecafe.designpatterns.creational.singleton.double_checked_locking;
 
 /*
  * With double-checked locking, we first check to see if an instance is created,

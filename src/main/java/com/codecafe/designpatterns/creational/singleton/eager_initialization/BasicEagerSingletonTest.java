@@ -1,19 +1,17 @@
-package com.codecafe.designpatterns.creational.singleton;
+package com.codecafe.designpatterns.creational.singleton.eager_initialization;
 
-public class BasicLazySingletonTest {
+public class BasicEagerSingletonTest {
 
   public static void main(String[] args) {
-
-    BasicLazySingleton basicSingleton1 = BasicLazySingleton.getInstance();
+    BasicEagerSingleton basicSingleton1 = BasicEagerSingleton.getInstance();
 
     System.out.println("basicSingleton1 : " + basicSingleton1.getValue());
     basicSingleton1.setValue(10);
     System.out.println("basicSingleton1 : " + basicSingleton1.getValue());
 
-    BasicLazySingleton basicSingleton2 = BasicLazySingleton.getInstance();
+    BasicEagerSingleton basicSingleton2 = BasicEagerSingleton.getInstance();
 
     System.out.println("basicSingleton2 : " + basicSingleton2.getValue());
-
   }
 
 }

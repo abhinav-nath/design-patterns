@@ -1,11 +1,12 @@
 package com.codecafe.designpatterns.creational.singleton;
 
+import com.codecafe.designpatterns.creational.singleton.eager_initialization.BasicEagerSingleton;
+
 import java.lang.reflect.Constructor;
 
 public class ReflectionBreaksSingletonDemo {
 
   public static void main(String[] args) throws Exception {
-
     BasicEagerSingleton s1 = BasicEagerSingleton.getInstance();
     BasicEagerSingleton s2 = BasicEagerSingleton.getInstance();
 

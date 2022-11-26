@@ -21,4 +21,5 @@ public class Singleton implements Serializable {
   protected Object readResolve() {
     return soleInstance;
   }
+
 }

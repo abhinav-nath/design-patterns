@@ -12,7 +12,6 @@ import java.io.ObjectOutputStream;
 public class SerializationBreaksSingletonDemo {
 
   public static void main(String[] args) throws Exception {
-
     Singleton s1 = Singleton.getInstance();
     System.out.println("HashCode of s1 : " + System.identityHashCode(s1));
 

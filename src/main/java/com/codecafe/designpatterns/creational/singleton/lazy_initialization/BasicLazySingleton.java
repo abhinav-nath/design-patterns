@@ -1,4 +1,4 @@
-package com.codecafe.designpatterns.creational.singleton;
+package com.codecafe.designpatterns.creational.singleton.lazy_initialization;
 
 public class BasicLazySingleton {
 
