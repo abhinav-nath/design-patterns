@@ -37,3 +37,8 @@
 - [Composite]()&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;[code](src/main/java/com/codecafe/designpatterns/structural/composite)
 - [Decorator]()
   - [Converting basic car to luxury sports car](src/main/java/com/codecafe/designpatterns/structural/decorator)
+
+---
+<p align="center">
+  ⭐ Star this repository — it helps!
+</p>
